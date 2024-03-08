@@ -3,18 +3,15 @@ _: {
     layer = "top";
     position = "top";
     mod = "dock";
-    modules-left = ["custom/nix" "hyprland/window"  "hyprland/workspaces"];
-    modules-center = [ "clock" ];
-    modules-right = [
-      "tray"
-      "network"
-      "battery"
-      "backlight"
-      "pulseaudio"
-      "idle_inhibitor"
-      "powermenu"
-    ];
 
+    modules-left = ["custom/nix" "hyprland/window"  "hyprland/workspaces"];
+
+    "custom/nix" = {
+      format = " 󱄅 ";
+      tooltip = false;
+      on-click-release = "wofi --show drun";
+    };
+    
     "hyprland/workspaces" = {
       format = "{icon}";
       format-icons = {
@@ -22,51 +19,40 @@ _: {
         default = "";
       };
     };
+	
+    modules-center = [ "clock" ];
 
-    "custom/nix" = {
-      format = " 󱄅 ";
-      tooltip = false;
-      on-click-release = "wofi --show drun";
-    };
+   "clock" = {
+          format = "{:󰥔 %R} ";
+          tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+     };
 
-    "custom/media" = {
-      "format" = " {}";
-      "max-lenght" = "40";
-      "interval" = "1";
-      "exec" = "playerctl metadata --format '{{ artist }} - {{ title }}'";
-      "on-click" = "playerctl play-pause";
-      "on-click-right" = "playerctl stop";
-      "smooth-scrolling-threshold" = "4";
-      "on-scroll-up" = "playerctl next";
-      "on-scroll-down" = "playerctl previous";
-    };
 
-    "idle_inhibitor" = {
-      format = "{icon}";
-      format-icons = {
-        activated = " ";
-        deactivated = " ";
-      };
-    };
+    modules-right = [
+      "tray"
+      "network"
+      "battery"
+      "backlight"
+      "pulseaudio"
+      "idle_inhibitor"
+      "custom/powermenu"
+    ];
 
-    "tray" = {
+   "tray" = {
       spacing = "10";
       icon-size = "13";
     };
 
-    "clock" = {
-      format = "{:󰥔 %R} ";
-      tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-    };
+	"network" = {
+	      format-wifi = "󰖩 {essid}";
+	      format-ethernet = "󰈀 ";
+	      format-linked = "{ifname} (No IP) 󰈀 ";
+	      format-disconnected = "󰖪  Disconnected";
+	      on-click = "kitty -e nmtui";
+	      tooltip-format = "{essid} {signalStrength}%";
+  	 };
 
-    "backlight" = {
-      format = "{icon}{percent}%";
-      format-icons = ["󰃞 " "󰃟 " "󰃠 "];
-      on-scroll-up = "brightnessctl  set 5+";
-      on-scroll-down = "brightnessctl  set 5-";
-    };
-
-    "battery" = {
+     "battery" = {
       states = {
         warning = "30";
         critical = "15";
@@ -79,16 +65,14 @@ _: {
       format-icons = ["  " "  " "  " "  " "  "];
     };
 
-    "network" = {
-      format-wifi = "󰖩 {essid}";
-      format-ethernet = "󰈀 ";
-      format-linked = "{ifname} (No IP) 󰈀 ";
-      format-disconnected = "󰖪  Disconnected";
-      on-click = "kitty -e nmtui";
-      tooltip-format = "{essid} {signalStrength}%";
-    };
-
-    "pulseaudio" = {
+    "backlight" = {
+          format = "{icon}{percent}%";
+          format-icons = ["󰃞 " "󰃟 " "󰃠 "];
+          on-scroll-up = "brightnessctl  set 5+";
+          on-scroll-down = "brightnessctl  set 5-";
+     };
+    
+  "pulseaudio" = {
       format = "{icon} {volume}%";
       format-muted = " 󰖁 ";
       format-icons = {
@@ -103,9 +87,18 @@ _: {
       
     };
 
+    "idle_inhibitor" = {
+      format = "{icon}";
+      format-icons = {
+        activated = " ";
+        deactivated = " ";
+      };
+    };    
+  
     "custom/powermenu" = {
       format = " ";
       on-click = "$HOME/.config/rofi/powermenu/powermenu.sh";
     };
+
   };
 }
