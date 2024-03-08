@@ -36,5 +36,6 @@
   	./sys-core/nushell/nu.nix
   	./wms/hyprland/hyprland.nix
   	./programs/waybar/waybar.nix
+  	./programs/kitty/kitty.nix
   ];
 }
