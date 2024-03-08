@@ -35,6 +35,8 @@
     pcloud			### cloud storage and file syncing
     bitwarden		### password manager
     mullvad-vpn		### vpn
+    pavucontrol		### audio manager
+    brightnessctl	### backlight control
 
 	## coding
 	vscodium		### non microsoft version of vs code, ide

@@ -19,7 +19,7 @@ _: ''
     margin-bottom: 0px;
     padding: 3px;
   }
-  tray {
+ #tray {
   border: 2px solid #9999CC;
   padding-left: 5px;
   padding-right: 5px
@@ -65,7 +65,7 @@ _: ''
   }
   #clock {
       border-radius: 0px 10px 10px 0px}
-  #custom-arch {
+  #custom-nix {
     font-size: 16px;
   margin-left: 3px;
   margin-right: 3px }

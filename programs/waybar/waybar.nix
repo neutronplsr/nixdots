@@ -1,11 +1,5 @@
-{
-  osConfig,
-  config,
-  lib,
-  pkgs,
-  ...
-}: let
-  # Catppuccin
+{ osConfig, config, lib, pkgs, ...}:
+ let
    waybar_config = import ./catppuccin/config.nix { inherit osConfig config lib pkgs; };
    waybar_style = import ./catppuccin/style.nix { inherit (config) colorscheme; };
  in {
@@ -18,13 +12,7 @@
   xdg = {
     configFile = {
       "waybar/machiatto.css".text = ''
-        /*
-        *
-        * Catppuccin Macchiato palette
-        * Maintainer: rubyowo
-        *
-        */
-
+      
         @define-color base   #24273a;
         @define-color mantle #1e2030;
         @define-color crust  #181926;

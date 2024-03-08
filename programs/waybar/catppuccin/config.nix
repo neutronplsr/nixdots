@@ -1,17 +1,18 @@
-
 _: {
   mainBar = {
     layer = "top";
     position = "top";
     mod = "dock";
-    modules-left = ["custom/nix" "hyprland/workspaces"];
-    modules-center = ["hyprland/window"];
+    modules-left = ["custom/nix" "hyprland/window"  "hyprland/workspaces"];
+    modules-center = [ "clock" ];
     modules-right = [
       "tray"
       "network"
       "battery"
+      "backlight"
       "pulseaudio"
-      "clock"
+      "idle_inhibitor"
+      "powermenu"
     ];
 
     "hyprland/workspaces" = {
@@ -58,21 +59,11 @@ _: {
       tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
     };
 
-    "cpu" = {
-      format = " {usage}%";
-      tooltip = "false";
-    };
-
-    "memory" = {
-      format = " {}%";
-      on-click = "foot -e btop";
-    };
-
     "backlight" = {
       format = "{icon}{percent}%";
       format-icons = ["󰃞 " "󰃟 " "󰃠 "];
-      on-scroll-up = "light -A 1";
-      on-scroll-down = "light -U 1";
+      on-scroll-up = "brightnessctl  set 5+";
+      on-scroll-down = "brightnessctl  set 5-";
     };
 
     "battery" = {
@@ -93,25 +84,23 @@ _: {
       format-ethernet = "󰈀 ";
       format-linked = "{ifname} (No IP) 󰈀 ";
       format-disconnected = "󰖪  Disconnected";
-      on-click = "foot -e nmtui";
+      on-click = "kitty -e nmtui";
       tooltip-format = "{essid} {signalStrength}%";
     };
 
     "pulseaudio" = {
-      format = "{icon}";
+      format = "{icon} {volume}%";
       format-muted = " 󰖁 ";
       format-icons = {
         default = ["  " "  " "  "];
       };
-      on-click = "pavucontrol &";
-    };
 
-    "custom/wmname" = {
-      format = " ";
-      tooltip = "false";
-      on-click = "$HOME/.config/rofi/launchers/type-1/launcher.sh";
-      on-click-right = "$HOME/.config/hypr/Scripts/screenshot";
-      on-click-middle = "$HOME/.config/hypr/Scripts/wallpaper-switch";
+	  on-scroll-up = "amixer -q sset Master 3%+";
+      on-scroll-down = "amixer -q sset Master 3%- ";
+      
+      on-click-right = "pavucontrol &";
+      on-click = "amixer -q sset Master toggle";
+      
     };
 
     "custom/powermenu" = {
