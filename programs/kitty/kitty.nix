@@ -84,6 +84,8 @@
 		# white
 		color7  #BAC2DE
 		color15 #A6ADC8
+		background_opacity         0.6
+#		dynamic_background_opacity yes
 		'';
 	};
 }
