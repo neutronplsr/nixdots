@@ -1,0 +1,117 @@
+l
+ls
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gx home-manager
+nix-channel --update
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+nix-channel --update
+nix-shell '<home-manager>' -A install
+exit
+cd .nixdots/
+nix-shell '<home-manager>' -A install
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+nix-shell '<home-manager>' -A install
+nix-channel --update
+nix-shell '<home-manager>' -A install
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+nix-channel --update
+nix-shell '<home-manager>' -A install
+nix-shell '<home-manager>' -AI install
+nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz home-manager
+nix-channel --update
+nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz home-manager
+nix-channel --update
+nix-shell '<home-manager>' -AI install
+cd .nixdots/
+ls
+nix flake update
+sudo nixos-rebuild switch --flake .
+ls
+ll
+ls -a
+all
+cd .nixdots/
+nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz home-manager
+nix-shell '<home-manager>' -AI install
+nixos nix-channel list
+nix-channel list
+nix-channel --list
+nix-shell  '<home-manager>' -A install
+nmtui
+nix-shell  '<home-manager>' -A install
+nix-channel --update
+nix-shell  '<home-manager>' -A install
+nix-channel --list
+nix-shell  <home-manager> -A install
+nix-shell home-manager -A install
+nix-shell '<home-manager>' -A install
+nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz home-manager
+nix-channel --list
+nix-channel --update
+nix-channel --list
+nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz home-manager1
+nix-channel --update
+nix-channel --list
+nix-shell '<home-manager1>' -A install
+micro ./.bash_history
+nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz home-manager
+nix-channel --update
+nix-shell '<home-manager>' -A install
+sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz home-manager
+sudo nix-channel --update
+sudo nix-shell '<home-manager>' -A install
+micro /root/.config/home-manager/home.nix
+sudo micro /root/.config/home-manager/home.nix
+nix-channe; --remove home-manager
+nix-channe --remove home-manager
+nix-channel --remove home-manager
+nix-channel --update
+nix-channel --list
+nix-channel --remove home-manager1
+nix-channel --list
+nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz home-manager
+nix-channel --update
+nix-channel --list
+nix-shell '<home-manager>' -A install
+micro .config/home-manager/home.nix
+cp .config/home-manager/home.nix ./.nixdots/
+cd .nixdots/
+home-manager switch
+micro flake.nix
+ls
+ll
+ls all
+ls -a
+home-manager switch --flake .
+micro flake.nix
+home-manager switch --flake .
+micro flake.nix
+home-manager switch --flake .
+micro flake.nix
+home-manager switch --flake .
+nix flake update
+sudo nixos-rebuild switch --flake .
+micro home.nix
+home-manager switch --flake .
+micro home.nix
+home-manager switch --flake .
+bash
+micro configuration.nix
+home-manager switch --flake .
+nix flake update
+sudo nixos-rebuild switch --flake .
+micro configuration.nix
+sudo nixos-rebuild switch --flake .
+micro configuration.nix
+sudo nixos-rebuild switch --flake .
+micro configuration.nix
+sudo nixos-rebuild switch --flake .
+micro configuration.nix
+sudo nixos-rebuild switch --flake .
+micro configuration.nix
+sudo nixos-rebuild switch --flake .
+micro configuration.nix
+cd .nixdots/
+ls
+mkdir sys-core
+mkdir sys-core/nushell
+micro sys-core/nushell/nu.nix
