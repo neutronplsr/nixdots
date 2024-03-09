@@ -17,6 +17,7 @@
     wofi     ### program runner
     dunst    ### notification manager
 	flameshot### screenshot tool
+	blueman	 ###bluetooth gui manager
     
 	# core packages 
 	## ease of use, cli tools

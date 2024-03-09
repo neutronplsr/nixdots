@@ -77,18 +77,19 @@
   	pulse.enable = true;
   	jack.enable = true;
   };
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
 
-fonts.packages = with pkgs; [
-  noto-fonts
-  noto-fonts-cjk
-  noto-fonts-emoji
-  liberation_ttf
-  fira-code
-  fira-code-symbols
-  mplus-outline-fonts.githubRelease
-  dina-font
-  proggyfonts
-  papirus-icon-theme
-];
-  
+  fonts.packages = with pkgs; [
+  	noto-fonts
+	noto-fonts-cjk
+	noto-fonts-emoji
+	liberation_ttf
+	fira-code
+	fira-code-symbols
+	mplus-outline-fonts.githubRelease
+	dina-font
+	proggyfonts
+	papirus-icon-theme
+  ];
 }
