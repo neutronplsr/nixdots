@@ -4,6 +4,7 @@ These are likely very messy and inefficent, but who cares!
 
 ## to dos
 - waybar sperate laptop and desktop
+- bool for weather security key is to be used
 - change things to defaults rather than host names
 - conda and nushell
 - better way to do hyprland config
