@@ -30,7 +30,7 @@
 		    disable-history: false;
 		    hide-scrollbar: true;
 		    display-drun: "   Apps ";
-		    display-window: "   Windows";
+		    display-window: " 󰀻  Windows";
 		    display-Network: " 󰤨  Network";
 		    sidebar-mode: true;
 		}
