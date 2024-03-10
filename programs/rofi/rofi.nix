@@ -36,7 +36,9 @@
 		    sidebar-mode: true;
 		}
 		
-		@theme "./catppuccin-mocha"
+		@theme "catppuccin-mocha"
 	'';
+	home.file.".config/rofi/catppuccin-mocha.rasi".text = ./catppuccin-mocha.rasi;
+
 	
 }
