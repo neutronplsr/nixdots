@@ -18,13 +18,13 @@
     waybar   ### widget bar
     rofi     ### program runner
     dunst    ### notification manager
-	sway-contrib.grimshot### screenshot tool
+	sway-contrib.grimshot  ### screenshot tool
 	blueman	 ### bluetooth gui manager
-		 	 ### screen locking
+	swaylock ### screen locking
  	hyprpaper### wallpaper manager
  	gnome.nautilus ### gui file manager
 	catppuccin-gtk ### gui theming
-	wl-clipboard		 ### clipboard
+	wl-clipboard   ### clipboard
     
 	# core packages 
 	## ease of use, cli tools
@@ -117,5 +117,6 @@
   	./programs/hyprpaper/hyprpaper.nix
   	./programs/dunst/dunst.nix
   	./programs/rofi/rofi.nix
+  	./programs/swaylock/swaylock.nix
   ];
 }
