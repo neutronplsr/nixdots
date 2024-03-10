@@ -37,6 +37,6 @@
 		}
 		
 		@theme "catppuccin-mocha"
-	''
+	'';
 	
 }
