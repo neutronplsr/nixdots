@@ -767,5 +767,6 @@ def nixUpdate [] {
     sudo nixos-rebuild switch --flake /home/neutron/.nixdots/.
     home-manager switch --flake /home/neutron/.nixdots/.	
     nix-env --delete-generations +5
+    sudo /run/current-system/bin/switch-to-configuration boot
 }
 
