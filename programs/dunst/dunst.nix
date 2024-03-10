@@ -1,5 +1,5 @@
 { config, pkgs, ...}: {
-	home-manager.services.dunst.settings = {
+	services.dunst.settings = {
 		global = {
 			frame_color = "#89B4FA";
 		};

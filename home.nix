@@ -9,19 +9,21 @@
   nixpkgs.config.permittedInsecurePackages = [
                   "electron-25.9.0"
   ];
+
   home.packages = with pkgs; [
 	# window manager specfic packages
 	## hyprland enviorment 
     hyprland ### window manager
     xdg-desktop-portal-gtk ###needed for wayland config stuff
     waybar   ### widget bar
-    wofi     ### program runner
+    rofi     ### program runner
     dunst    ### notification manager
 	sway-contrib.grimshot### screenshot tool
 	blueman	 ### bluetooth gui manager
 		 	 ### screen locking
- 	hyprpaper ### wallpaper manager
-
+ 	hyprpaper### wallpaper manager
+ 	gnome.nautilus ### gui file manager
+	catppuccin-gtk ### gui theming
 	wl-clipboard		 ### clipboard
     
 	# core packages 
@@ -72,34 +74,32 @@
      EDITOR = "micro";
   };
   programs.home-manager.enable = true;
-
+  
   services.dunst.enable = true;
-  services.dunst.settings = {
-		global = {
-			frame_color = "#89B4FA";
-		};
-		
-		urgency_low = {
-			background = "#1E1E2E";
-			foreground = "#CDD6F4";
-		};
-		
-		urgency_normal = {
-		background = "#1E1E2E";
-		foreground = "#CDD6F4";
-		};
-		
-		urgency_critical = {
-		background = "#1E1E2E";
-		foreground = "#CDD6F4";
-		frame_color = "#FAB387";	
-		};
-	}; 
   fonts.fontconfig.enable = true;
 
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.systemd.enable = true;
-  
+
+  gtk = {
+        enable = true;
+        theme = {
+          name = "Catppuccin-Macchiato-Compact-Teal-Dark";
+          package = pkgs.catppuccin-gtk.override {
+            accents = [ "teal" ];
+            size = "compact";
+            tweaks = [ "rimless" "black" ];
+            variant = "macchiato";
+          };
+        };
+  };
+  xdg.configFile = {
+    "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
+    "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
+    "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
+  };
+
+    
   programs.git = {
   	enable = true;
   	userName = "neutronpslr";
@@ -109,11 +109,13 @@
 
   imports = [
   	./sys-core/nushell/nu.nix
+  	./sys-core/lightdm/lightdm.nix
   	./wms/hyprland/hyprland.nix
   	./programs/waybar/waybar.nix
   	./programs/kitty/kitty.nix
   	./programs/micro/micro.nix
   	./programs/hyprpaper/hyprpaper.nix
-#  	./programs/dunst/dunst.nix
+  	./programs/dunst/dunst.nix
+  	./programs/rofi/rofi.nix
   ];
 }

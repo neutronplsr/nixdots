@@ -9,7 +9,7 @@ _: { mainBar = {
 	"custom/nix" = {
 		format = " 󱄅 ";
 		tooltip = false;
-		on-click = "wofi --show drun";
+		on-click = "rofi -show drun";
 		on-click-right = "pavucontrol &";
 	};
 

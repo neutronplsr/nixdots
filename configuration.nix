@@ -31,7 +31,9 @@
     layout = "us";
     xkbVariant = "";
     enable = true;
-    displayManager.lightdm.enable = true;
+    displayManager.lightdm = {
+    	enable = true;	
+    };
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
