@@ -1,5 +1,5 @@
 { config, pkgs, ...}: {	
-	security.pam.services.swaylock = {};
+	pam.services.swaylock = {};
 	programs.swaylock = {
 		enable = true;
 		settings = {
