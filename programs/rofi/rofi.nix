@@ -21,7 +21,7 @@
 	# };
 	home.file.".config/rofi/config.rasi".text = ''
 		configuration{
-		    modi: "run,drun,window";
+		    modi: "drun,window";
 		    icon-theme: "Oranchelo";
 		    show-icons: true;
 		    terminal: "alacritty";
@@ -30,8 +30,7 @@
 		    disable-history: false;
 		    hide-scrollbar: true;
 		    display-drun: "   Apps ";
-		    display-run: "   Run ";
-		    display-window: " 﩯  Window";
+		    display-window: "   Windows";
 		    display-Network: " 󰤨  Network";
 		    sidebar-mode: true;
 		}
