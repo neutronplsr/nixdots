@@ -38,7 +38,7 @@
 		
 		@theme "catppuccin-mocha"
 	'';
-	home.file.".config/rofi/catppuccin-mocha.rasi" = ./catppuccin-mocha.rasi;
+	home.file.".config/rofi/catppuccin-mocha.rasi".text = ./catppuccin-mocha.rasi;
 
 	
 }
