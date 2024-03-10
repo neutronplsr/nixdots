@@ -54,9 +54,11 @@
   git
   wget
   kitty
+  tlp
   ## gui pkgs
   firefox
   ];
+
   programs.hyprland = {
   	enable = true;
   	xwayland.enable = true;
@@ -77,9 +79,13 @@
   	pulse.enable = true;
   	jack.enable = true;
   };
+  
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 
+  services.tlp.enable = true;
+  
+  
   fonts.packages = with pkgs; [
   	noto-fonts
 	noto-fonts-cjk
@@ -92,4 +98,21 @@
 	proggyfonts
 	papirus-icon-theme
   ];
+
+  environment.sessionVariables = rec {
+    XDG_CURRENT_DESKTOP = "Hyprland";
+   	XDG_SESSION_TYPE =  "wayland";
+  	XDG_SESSION_DESKTOP =  "Hyprland";
+   	GDK_BACKEND =  "wayland,x11";
+   	XDG_SCREENSHOTS_DIR = "$HOME/Pictures/screenshots";
+ 	XDG_CACHE_HOME  = "$HOME/.cache";
+    XDG_CONFIG_HOME = "$HOME/.config";
+    XDG_DATA_HOME   = "$HOME/.local/share";
+    XDG_STATE_HOME  = "$HOME/.local/state";
+    XDG_BIN_HOME    = "$HOME/.local/bin";
+    PATH = [ 
+      "${XDG_BIN_HOME}"
+    ];
+   };
+  
 }

@@ -13,11 +13,16 @@
 	# window manager specfic packages
 	## hyprland enviorment 
     hyprland ### window manager
+    xdg-desktop-portal-gtk ###needed for wayland config stuff
     waybar   ### widget bar
     wofi     ### program runner
     dunst    ### notification manager
-	flameshot### screenshot tool
-	blueman	 ###bluetooth gui manager
+	sway-contrib.grimshot### screenshot tool
+	blueman	 ### bluetooth gui manager
+		 	 ### screen locking
+ 	hyprpaper ### wallpaper manager
+
+	wl-clipboard		 ### clipboard
     
 	# core packages 
 	## ease of use, cli tools
@@ -68,24 +73,47 @@
   };
   programs.home-manager.enable = true;
 
-
+  services.dunst.enable = true;
+  services.dunst.settings = {
+		global = {
+			frame_color = "#89B4FA";
+		};
+		
+		urgency_low = {
+			background = "#1E1E2E";
+			foreground = "#CDD6F4";
+		};
+		
+		urgency_normal = {
+		background = "#1E1E2E";
+		foreground = "#CDD6F4";
+		};
+		
+		urgency_critical = {
+		background = "#1E1E2E";
+		foreground = "#CDD6F4";
+		frame_color = "#FAB387";	
+		};
+	}; 
   fonts.fontconfig.enable = true;
 
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.systemd.enable = true;
-
+  
   programs.git = {
   	enable = true;
   	userName = "neutronpslr";
   	userEmail = "chiariniolivia@gmail.com";
   	extraConfig = { push = { autoSetupRemote = true; };};
   };
-  
+
   imports = [
   	./sys-core/nushell/nu.nix
   	./wms/hyprland/hyprland.nix
   	./programs/waybar/waybar.nix
   	./programs/kitty/kitty.nix
   	./programs/micro/micro.nix
+  	./programs/hyprpaper/hyprpaper.nix
+#  	./programs/dunst/dunst.nix
   ];
 }
