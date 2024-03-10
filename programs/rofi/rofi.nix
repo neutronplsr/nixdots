@@ -36,7 +36,7 @@
 		    sidebar-mode: true;
 		}
 		
-		@theme "catppuccin-mocha"
+		@theme "./catppuccin-mocha"
 	'';
 	
 }
