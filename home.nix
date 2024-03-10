@@ -21,6 +21,7 @@
 	sway-contrib.grimshot  ### screenshot tool
 	blueman	 ### bluetooth gui manager
 	swaylock ### screen locking
+	swayidle ### idle checking
  	hyprpaper### wallpaper manager
  	gnome.nautilus ### gui file manager
 	catppuccin-gtk ### gui theming
@@ -78,6 +79,7 @@
   services.dunst.enable = true;
   fonts.fontconfig.enable = true;
 
+  services.swayidle.enable = true;
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.systemd.enable = true;
 
@@ -109,8 +111,9 @@
 
   imports = [
   	./sys-core/nushell/nu.nix
-  	./sys-core/lightdm/lightdm.nix
+
   	./wms/hyprland/hyprland.nix
+
   	./programs/waybar/waybar.nix
   	./programs/kitty/kitty.nix
   	./programs/micro/micro.nix
@@ -118,5 +121,6 @@
   	./programs/dunst/dunst.nix
   	./programs/rofi/rofi.nix
   	./programs/swaylock/swaylock.nix
+  	./programs/swayidle/swayidle.nix
   ];
 }

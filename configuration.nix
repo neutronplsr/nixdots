@@ -4,6 +4,22 @@
       ./hardware-configuration.nix
    ];
 
+	### you may need to remove this, this is all for security keys
+	services.udev.packages = [ pkgs.yubikey-personalization ];
+	
+	programs.gnupg.agent = {
+	  enable = true;
+	  enableSSHSupport = true;
+	};
+    security.pam.services = {
+    	swaylock = {};
+    	login.u2fAuth = true;
+  		sudo.u2fAuth = true;
+	};
+
+  ### security key stuff over
+   
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   
@@ -32,10 +48,10 @@
     xkbVariant = "";
     enable = true;
     displayManager.lightdm = {
-    	enable = true;	
+    	enable = true;
     };
   };
-
+  
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "23.11"; 
   security.polkit.enable = true;
@@ -52,6 +68,8 @@
   
   environment.systemPackages = with pkgs; [
   ## core pkgs
+  pamtester
+  pam_u2f
   micro
   git
   wget
@@ -86,8 +104,7 @@
   hardware.bluetooth.powerOnBoot = true;
 
   services.tlp.enable = true;
-  
-  
+   
   fonts.packages = with pkgs; [
   	noto-fonts
 	noto-fonts-cjk

@@ -97,8 +97,8 @@ _: { mainBar = {
 	"idle_inhibitor" = {
 		format = "{icon}";
 		format-icons = {
-			activated = " ";
-			deactivated = " ";
+			activated = "󰅶 ";
+			deactivated = "󰾪 ";
 		};
 		tooltip-format = "idle inhibitor";
 	};    
