@@ -6,14 +6,21 @@
 
 	### you may need to remove this, this is all for security keys
 	services.udev.packages = [ pkgs.yubikey-personalization ];
-	
+
+	services.tlp = {
+	    enable = true;
+	    settings = {
+	      TLP_DEFAULT_MODE = "BAT";
+	      TLP_PERSISTENT_DEFAULT = 1;
+	    };
+	 };
+		
 	programs.gnupg.agent = {
 	  enable = true;
-	  enableSSHSupport = true;
-	};
+	  	};
     security.pam.services = {
     	swaylock = {};
-    	login.u2fAuth = true;
+#    	login.u2fAuth = true;
   		sudo.u2fAuth = true;
 	};
 
@@ -21,6 +28,7 @@
    
 
   boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.configurationLimit = 5;
   boot.loader.efi.canTouchEfiVariables = true;
   
   networking.hostName = "livova-laptop-nixos"; 
@@ -102,9 +110,7 @@
   
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
-
-  services.tlp.enable = true;
-   
+ 
   fonts.packages = with pkgs; [
   	noto-fonts
 	noto-fonts-cjk
