@@ -1,4 +1,3 @@
-
 { config, pkgs, ...}:{
 	programs.home-manager.enable = true;
 	home.username = "neutron";
@@ -9,10 +8,10 @@
 	home.packages = with pkgs; [
 		firefox	## web browser
 		kitty	## terminal emulator
-		rofi	## launcher
-		dunst	## notfications
-	];
+		obsidian## note taking/organization
 
+		(nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Ubuntu" ]; })
+	];
 	programs.git = {
 		enable 		= true;
 		userName	= "neutronplsr";
@@ -28,6 +27,8 @@
 		./wms/hyprland/hyprland.nix
 		#./wms/qtile/qtile.nix
 
-		## defines what config files to use	
+		## defines what config files to use
+		./programs/kitty/kitty.nix
+		./programs/micro/micro.nix	
 	];
 }

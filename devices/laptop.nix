@@ -57,4 +57,10 @@
   	opengl.enable = true;
   	nvidia.modesetting.enable = true;
   };
+
+  
+  services.udev.packages = [ pkgs.yubikey-personalization ];
+  programs.gnupg.agent = {
+  	  enable = true;
+  };
 }
