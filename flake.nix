@@ -19,14 +19,18 @@
 				modules = [
 					./core.nix
 					./devices/laptop.nix
-					#define optional package sets to install
-					#./programs/fun.nix
-					#./programs/school.nix
-
+				
 					home-manager.nixosModules.home-manager {
 						home-manager.useGlobalPkgs = true;
 						home-manager.useUserPackages   = true;
 						home-manager.users.neutron = import ./home.nix;
+						home-manager.extraSpecialArgs = {
+							imports = [
+								#define optional package sets to install
+								#./programs/fun.nix
+								./programs/school.nix												
+							];	
+						};							
 					}
 				];
 				
