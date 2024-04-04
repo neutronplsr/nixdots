@@ -35,5 +35,8 @@
 	micro
   ];
   nix.settings.experimental-features  = [ "nix-command" "flakes" ]; 
+  nix.extraOptions = ''
+	warn-dirty = false
+  '';
   system.stateVersion = "23.11";
 }
