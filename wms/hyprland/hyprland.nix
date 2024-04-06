@@ -27,11 +27,14 @@
 	 	enable = true;
 		enableNvidiaPatches = true;
 	 	xwayland.enable = true;
+	 	systemd.enable = true;
 	 	settings = {
 			"$mod" = "SUPER";
 			"exec-once" = [
 				"waybar"
 				"kitty"
+				"pcloud"
+				"mullvad-gui"
 			];
 			bind = [
 				"$mod shift, f, exec, firefox"

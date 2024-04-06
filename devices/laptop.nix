@@ -58,9 +58,23 @@
   	nvidia.modesetting.enable = true;
   };
 
-  
-  services.udev.packages = [ pkgs.yubikey-personalization ];
-  programs.gnupg.agent = {
-  	  enable = true;
+  services.udev.packages = [ pkgs.yubikey-personalization pkgs.libu2f-host ];
+  programs.gnupg.agent.enable = true;
+  services.pcscd.enable = true;
+
+  security.pam.services = {
+    login.u2fAuth = true;
+    sudo.u2fAuth = true;
   };
+  security.pam.yubico = {
+  	 enable = true;
+
+	debug = true;
+
+	mode = "challenge-response";
+
+	#id = [ "12345678" ];
+
+	control = "required"; 
+  }; 
 }
