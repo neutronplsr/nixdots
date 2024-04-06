@@ -64,18 +64,12 @@
 
   security.pam.services = {
     login.u2fAuth = true;
-    sudo.u2fAuth = false;
+    sudo.u2fAuth = true;
     swaylock = {};
   };
   security.pam.yubico = {
-  	 enable = true;
-
-	debug = true;
-
+  	enable = true;
 	mode = "challenge-response";
-
-	#id = [ "12345678" ];
-
 	control = "required"; 
   }; 
 }
