@@ -10,9 +10,7 @@
 	
 	programs.swaylock = {
 		enable = true;	
-	};
-	security.pam.services.swaylock = {};
-	
+	};	
 	
 	imports = [
 		## defines what config files to use	
