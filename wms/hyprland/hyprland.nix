@@ -1,11 +1,11 @@
 { inputs, config, pkgs, ... }: {
 
 	home.packages = with pkgs; [
-		rofi	## app launcher
-		dunst	## notfication deamon	
-		waybar	## task bar
-		hyprpaper	##wallpaper manager
-		hyprlock## screen locker
+		rofi		## app launcher
+		dunst		## notfication deamon	
+		waybar		## task bar
+		hyprpaper	## wallpaper manager
+		hyprlock	## screen locker
 		grimblast	## screenshot tool
 	];
 
