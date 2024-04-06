@@ -5,6 +5,7 @@
 		dunst	## notfication deamon	
 		waybar	## task bar
 		hyprpaper	##wallpaper manager
+		hyprlock## screen locker
 		grimblast	## screenshot tool
 	];
 
