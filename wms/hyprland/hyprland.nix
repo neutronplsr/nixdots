@@ -39,7 +39,7 @@
 			];
 			bind = [
 				"$mod shift, f, exec, firefox"
-				"$mod shift, s, exec, grimblast copysave area ~/Pictures/Screenshots/$( date +"%FT%H%M%z").png"
+				"$mod shift, s, exec, grimblast copysave area ~/Pictures/Screenshots/$(date +\"%FT%H%M%z\").png"
 				"$mod, return, exec, kitty"
 			];	
 		};
