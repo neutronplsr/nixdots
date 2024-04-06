@@ -5,7 +5,7 @@
 		dunst	## notfication deamon	
 		waybar	## task bar
 		hyprpaper	##wallpaper manager
-		sway-contrib.grimshot	## screenshot tool
+		grimblast	## screenshot tool
 	];
 
 	imports = [
