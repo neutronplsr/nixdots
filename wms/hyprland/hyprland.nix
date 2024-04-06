@@ -7,8 +7,9 @@
 		hyprpaper	## wallpaper manager
 		grimblast	## screenshot tool
 	];
-
-	programs.hyprlock.enable = true;
+	
+	programs.swaylock.enable = true;
+	
 	imports = [
 		## defines what config files to use	
 		../../programs/dunst/dunst.nix
