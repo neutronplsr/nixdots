@@ -64,7 +64,8 @@
 
   security.pam.services = {
     login.u2fAuth = true;
-    sudo.u2fAuth = true;
+    sudo.u2fAuth = false;
+    swaylock = {};
   };
   security.pam.yubico = {
   	 enable = true;

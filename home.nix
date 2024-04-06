@@ -115,5 +115,6 @@
 #		./programs/micro/micro.nix
 		./programs/pcloud/pcloud.nix
 		./programs/vesktop/vesktop.nix	
+		./programs/swayidle/swayidle.nix	
 	];
 }
