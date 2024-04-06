@@ -8,7 +8,9 @@
 		grimblast	## screenshot tool
 	];
 	
-	programs.swaylock.enable = true;
+	programs.swaylock = {
+		enable = true;	
+	};
 	
 	imports = [
 		## defines what config files to use	
