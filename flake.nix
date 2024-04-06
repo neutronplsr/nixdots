@@ -2,9 +2,14 @@
 	description  = "livova's nixos flake";
 
 	inputs = {
+		## nixos version
 		nixpkgs.url = "nixpkgs/nixos-23.11";
+
+		## home-manager version
 		home-manager.url = "github:nix-community/home-manager/release-23.11";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+		
 	};
 
 	outputs = inputs@{ self, nixpkgs, home-manager, ... }:
@@ -35,26 +40,7 @@
 					};}
 				];
 				
-			};
-			livova-desktop = lib.nixosSystem{
-				inherit system;
-				modules = [
-					./core.nix
-					./devices/desktop.nix
-					#define optional package sets to install
-					#./programs/fun.nix
-					#./programs/school.nix
-
-
-					home-manager.nixosModules.home-manager{
-						home-manager.useGlobalPkgs = true;
-						home-manager.useUserPackages   = true;
-						home-manager.users.neutron = import ./home.nix;
-					}
-				];
-				
 			};	
-	
 		};
 	};
 }
