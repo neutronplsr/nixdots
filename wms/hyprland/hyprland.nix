@@ -4,7 +4,8 @@
 		rofi	## app launcher
 		dunst	## notfication deamon	
 		waybar	## task bar
-		hyprpaper##wallpaper manager
+		hyprpaper	##wallpaper manager
+		sway-contrib.grimshot	## screenshot tool
 	];
 
 	imports = [
@@ -38,6 +39,7 @@
 			];
 			bind = [
 				"$mod shift, f, exec, firefox"
+				"$mod shift, s, exec, grimshot"
 				"$mod, return, exec, kitty"
 			];	
 		};
