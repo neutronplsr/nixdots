@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }:{
   networking.networkmanager.enable = true;
   i18n = {
    	defaultLocale = "en_US.UTF-8";
@@ -14,7 +13,7 @@
   	    LC_TELEPHONE = "en_US.UTF-8";
  		LC_TIME = "en_US.UTF-8";
  	};	
-   };
+  };
   time.timeZone = "America/New_York";
   programs.ssh.startAgent= true;
   security.polkit.enable = true;
@@ -52,19 +51,17 @@
   hardware.bluetooth.powerOnBoot = true;
 
 
+  ### need to figure out how to not need this
 
-
-  services.greetd = {
-	enable = true;
-	settings = rec {
-	    initial_session = {
-	    	command = "Hyprland";
-	    	user = "neutron";
-	    };
-	    default_session = initial_session;
-	};
+  programs.hyprland.enable = true;
+  services.xserver.displayManager = {
+  	sddm = {
+  		enable = true;
+  		wayland.enable = true;
+  	};
+  	defaultSession = "hyprland";
   };
-  
+       
   ## weird edgecase for obsidian, cant find another place to put this that doesnt throw an erorr
   nixpkgs.config.permittedInsecurePackages = [
   	"electron-25.9.0"

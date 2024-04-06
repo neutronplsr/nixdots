@@ -10,8 +10,27 @@
 		kitty	## terminal emulator
 		obsidian## note taking/organization
 
+		
+		gnome.nautilus	## file browser
+		feh		## image viewer
+		## nerdfonts i like
 		(nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Ubuntu" ]; })
 	];
+
+
+
+	## default apps
+	xdg.mimeApps= {
+		enable = true;
+		defaultApplications = {
+			"text/html"			= "firefox.desktop";
+			"application/pdf"	= "firefox.desktop";	
+			"image/png"			=  "feh.desktop";
+			"image/jpg"			=  "feh.desktop";
+			"image/jpeg"			=  "feh.desktop";			
+		};
+	};
+	## git config
 	programs.git = {
 		enable 		= true;
 		userName	= "neutronplsr";
