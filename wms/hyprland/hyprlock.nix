@@ -68,7 +68,7 @@
 	  valign = center
 	}
 	
-	''
+	'';
 	
 	services.swayidle = {
 	    enable = true;
