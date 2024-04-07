@@ -6,20 +6,9 @@
 		waybar		## task bar
 		hyprpaper	## wallpaper manager
 		grimblast	## screenshot tool
+		hyprlock	## screen locker
 	];
-	
-	programs.swaylock = {
-		enable = true;	
-		settings = {
-		  color = "808080";
-		  font-size = 24;
-		  indicator-idle-visible = false;
-		  indicator-radius = 100;
-		  line-color = "ffffff";
-		  show-failed-attempts = true;
-		};
-	};	
-	
+		
 	imports = [
 		## defines what config files to use	
 		../../programs/dunst/dunst.nix
