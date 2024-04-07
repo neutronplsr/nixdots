@@ -4,8 +4,6 @@
 		enable = true;
 	};
 
-
-
 	home.file."~/.config/hypr/hyprlock.conf".text = ''
 	general {
 	  disable_loading_bar = false
@@ -69,23 +67,23 @@
 	
 	'';
 	
-	services.swayidle = {
-	    enable = true;
-	    timeouts = [
-	      {
-	        timeout = 10;
-	        command = "${pkgs.libnotify}/bin/notify-send 'Locking in 5 seconds' -t 5000";
-	      }
-	      {
-	        timeout = 15;
-	        command = "hyprlock";
-	      }
-	    ];
-	    events = [
-	      {
-	        event = "before-sleep";
-	        command = "hyprlock";
-	      }
-	    ];
-	  };
+	# services.hypridle = {
+	#     enable = true;
+	#     timeouts = [
+	#       {
+	#         timeout = 10;
+	#         command = "${pkgs.libnotify}/bin/notify-send 'Locking in 5 seconds' -t 5000";
+	#       }
+	#       {
+	#         timeout = 15;
+	#         command = "hyprlock";
+	#       }
+	#     ];
+	#     events = [
+	#       {
+	#         event = "before-sleep";
+	#         command = "hyprlock";
+	#       }
+	#     ];
+	#   };
 }
