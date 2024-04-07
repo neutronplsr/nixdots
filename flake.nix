@@ -11,10 +11,6 @@
 
 		## hyprland versioning
 		 hyprland.url = "github:hyprwm/Hyprland";
-		 hyprland-plugins = {
-		 	url = "github:hyprwm/hyprland-plugins";
-		 	inputs.hyprland.follows = "hyprland";
-	 	 };
 	};
 
 	# defines outputs, our actual system
