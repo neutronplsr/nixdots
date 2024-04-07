@@ -66,7 +66,7 @@
 	}
 	
 	'';
-	services.hypridle.enable = true;
+	home.packages = [ pkgs.hypridle];
 	# services.hypridle = {
 	#     enable = true;
 	#     timeouts = [
