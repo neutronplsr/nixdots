@@ -5,7 +5,7 @@
 	home.stateVersion = "23.11";
 
 
-	
+	nixpkgs.overlays = [outputs.unstable-packages];	
 	# main packages for all systems
 	home.packages = with pkgs; [
 		## cli tools and core utilities
