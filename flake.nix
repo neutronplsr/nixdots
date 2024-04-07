@@ -4,8 +4,7 @@
 	inputs = {
 		## nixos version
 		nixpkgs.url = "nixpkgs/nixos-23.11";
-		nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-
+		
 		## home-manager version
 		home-manager.url = "github:nix-community/home-manager/release-23.11";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -55,14 +54,6 @@
 					];	}
 				];
 			};
-		};
-		overlays = {
-		  unstable-packages = final: _prev: {
-		      unstable = import inputs.nixpkgs-unstable {
-		        	system = final.system;
-		        	config.allowUnfree = true;
-		      };
-	    	};
 		};
 	};
 }

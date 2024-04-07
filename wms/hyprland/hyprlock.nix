@@ -66,6 +66,5 @@
 	}
 	
 	'';
-	nixpkgs.overlays = [ outputs.overlays.unstable-packages ];
 	home.packges = with pkgs; [ unstable.hypridle ];
 }
