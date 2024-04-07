@@ -43,9 +43,9 @@
 				"$mod, return, exec, kitty"
 			];	
 		};
-		plugins = {
+		plugins = [
 		inputs.hyprland-plugins.packages.${pkgs.system}.hyprlock
-		}
+		];
 		extraConfig = builtins.readFile ./hyprland.conf;
 	};
 }
