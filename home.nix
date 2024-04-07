@@ -14,7 +14,7 @@
 		kitty				### terminal emulator
 		linuxHeaders		### used for dkms modules
 		wl-clipboard   		### clipboard manager
-
+		hyprlock
 		## gui apps and utilities 
 		bitwarden			### password manager
 		feh					### image viewer
