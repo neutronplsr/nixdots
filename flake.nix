@@ -11,11 +11,15 @@
 
 		## hyprland stuff
 		hyprland.url = "github:hyprwm/Hyprland";
-		  hyprland-plugins = {
+		hyprland-plugins = {
 		    url = "github:hyprwm/hyprland-plugins";
 		    inputs.hyprland.follows = "hyprland";
 	  	};
 	  	hyprlock.url = "github:hyprwm/Hyprlock";
+	  	hyprlang = {
+	  	      url = "github:hyprwm/hyprlang";
+	  	      inputs.nixpkgs.follows = "nixpkgs";
+  	    };
 	};
 
 	# defines outputs, our actual system
