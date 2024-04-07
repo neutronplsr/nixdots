@@ -13,7 +13,8 @@
 		../../programs/dunst/dunst.nix
 		../../programs/hyprpaper/hyprpaper.nix
 		../../programs/rofi/rofi.nix		
-		../../programs/waybar/waybar.nix		
+		../../programs/waybar/waybar.nix
+		./hyprlock.nix
 	];
 
 	home.sessionVariables = rec {
@@ -43,9 +44,6 @@
 				"$mod, return, exec, kitty"
 			];	
 		};
-		plugins = [
-#			inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
-		];
 		extraConfig = builtins.readFile ./hyprland.conf;
 	};
 }
