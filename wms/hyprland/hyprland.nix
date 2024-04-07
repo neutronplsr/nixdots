@@ -23,7 +23,6 @@
 		XDG_SESSION_DESKTOP = "Hyprland";
 		GDK_BACKEND = "wayland,x11";	
 	};
-	programs.hyprlock.enable = true;
 	## hyprland settings
 	 wayland.windowManager.hyprland = {
 	 	enable = true;
