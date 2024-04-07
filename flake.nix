@@ -4,6 +4,7 @@
 	inputs = {
 		## nixos version
 		nixpkgs.url = "nixpkgs/nixos-23.11";
+		nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
 		## home-manager version
 		home-manager.url = "github:nix-community/home-manager/release-23.11";
@@ -23,7 +24,7 @@
 	};
 
 	# defines outputs, our actual system
-	outputs = inputs@{ self, nixpkgs, home-manager, hyprland, hyprlock, ... }:
+	outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, hyprland, hyprlock, ... }:
 	## defines variables for our various sytems
 	let 
 		system = "x86_64-linux";
@@ -55,5 +56,13 @@
 				];
 			};
 		};
+
+		overlays = {
+			add-unstable-packages = final: _prev: {
+			    unstable = import nixpkgs-unstable {
+			      system = "x86_64-linux";
+			    };
+		  	};
+	  	};
 	};
 }

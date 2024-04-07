@@ -1,12 +1,4 @@
-{ inputs, config, pkgs, ... }: 
-
-let
-  unstable = import
-    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/<branch or commit>)
-    # reuse the current configuration
-    { config = config.nixpkgs.config; };
-in
-{
+{ inputs, config, pkgs, ... }: {
 
 	programs.hyprlock = {
 		enable = true;
@@ -74,5 +66,4 @@ in
 	}
 	
 	'';
-	home.packages = [ unstable.hypridle];
 }
