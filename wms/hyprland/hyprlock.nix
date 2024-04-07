@@ -7,11 +7,11 @@
 	    enable = true;
 	    timeouts = [
 	      {
-	        timeout = 115;
+	        timeout = 10;
 	        command = "${pkgs.libnotify}/bin/notify-send 'Locking in 5 seconds' -t 5000";
 	      }
 	      {
-	        timeout = 120;
+	        timeout = 15;
 	        command = "hyprlock";
 	      }
 	    ];
