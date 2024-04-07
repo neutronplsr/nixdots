@@ -6,7 +6,6 @@
 		waybar		## task bar
 		hyprpaper	## wallpaper manager
 		grimblast	## screenshot tool
-		hyprlock	## screen locker
 	];
 		
 	imports = [
@@ -44,6 +43,9 @@
 				"$mod, return, exec, kitty"
 			];	
 		};
+		plugins = {
+		inputs.hyprland-plugins.packages.${pkgs.system}.hyprlock
+		}
 		extraConfig = builtins.readFile ./hyprland.conf;
 	};
 }
