@@ -18,7 +18,7 @@
 	};
 
 	# defines outputs, our actual system
-	outputs = inputs@{ self, nixpkgs, home-manager, ... }:
+	outputs = inputs@{ self, nixpkgs, home-manager, hyprland, ... }:
 	## defines variables for our various sytems
 	let 
 		system = "x86_64-linux";
@@ -46,6 +46,8 @@
 							./programs/fun.nix
 							./programs/school.nix												
 					];	}
+
+					hyprland.homeManagerModules.default
 				];
 			};
 			## this will be used when the host name of our device matches ---	
