@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }: {
+{ inputs, config, pkgs, outputs, ... }: {
 
 	home.packages = with pkgs; [
 		rofi		## app launcher
