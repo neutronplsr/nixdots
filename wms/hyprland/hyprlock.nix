@@ -75,13 +75,13 @@
 	      }
 	      {
 	        timeout = 10;
-	        command = "${hyprlock}/bin/hyprlock ";
+	        command = "hyprlock";
 	      }
 	    ];
 	    events = [
 	      {
 	        event = "before-sleep";
-	        command = "${hyprlock}/bin/hyprlock";
+	        command = "hyprlock";
 	      }
 	    ];
 	  };
