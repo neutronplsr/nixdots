@@ -14,11 +14,12 @@
 		  hyprland-plugins = {
 		    url = "github:hyprwm/hyprland-plugins";
 		    inputs.hyprland.follows = "hyprland";
-	  };	
+	  	};
+	  	hyprlock.url = "github:hyprwm/Hyprlock";
 	};
 
 	# defines outputs, our actual system
-	outputs = inputs@{ self, nixpkgs, home-manager, hyprland, ... }:
+	outputs = inputs@{ self, nixpkgs, home-manager, hyprland, hyprlock ... }:
 	## defines variables for our various sytems
 	let 
 		system = "x86_64-linux";
@@ -44,7 +45,8 @@
 					## allows us to pick what optional modules of packages to install
 					{home-manager.users.neutron.imports = [
 							./programs/fun.nix
-							./programs/school.nix												
+							./programs/school.nix	
+						 	hyprlock.homeManagerModules.hyprlock											
 					];	}
 				];
 			};
