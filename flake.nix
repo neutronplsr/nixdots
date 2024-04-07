@@ -48,6 +48,7 @@
 					];	}
 
 					hyprland.homeManagerModules.default
+					{wayland.windowManager.hyprland.enable = true;}
 				];
 			};
 			## this will be used when the host name of our device matches ---	
