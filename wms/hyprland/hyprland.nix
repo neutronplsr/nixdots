@@ -5,7 +5,7 @@
 		dunst		## notfication deamon	
 		waybar		## task bar
 		hyprpaper	## wallpaper manager
-		hypridle	## idle timer
+#		hypridle	## idle timer
 		grimblast	## screenshot tool
 	];
 		
