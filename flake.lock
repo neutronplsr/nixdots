@@ -228,6 +228,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-unstable": {
+      "locked": {
+        "lastModified": 1712420723,
+        "narHash": "sha256-VnG0Eu394Ga2FCe8Q66m6OEQF8iAqjDYsjmtl+N2omk=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "9e7f26f82acb057498335362905fde6fea4ca50a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1711523803,
@@ -266,7 +282,8 @@
         "hyprland-plugins": "hyprland-plugins",
         "hyprlang": "hyprlang_2",
         "hyprlock": "hyprlock",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_3",
+        "nixpkgs-unstable": "nixpkgs-unstable"
       }
     },
     "systems": {
