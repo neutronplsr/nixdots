@@ -1,4 +1,12 @@
-{ inputs, config, pkgs, ... }: {
+{ inputs, config, pkgs, ... }: 
+
+let
+  unstable = import
+    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/<branch or commit>)
+    # reuse the current configuration
+    { config = config.nixpkgs.config; };
+in
+{
 
 	programs.hyprlock = {
 		enable = true;
@@ -66,24 +74,5 @@
 	}
 	
 	'';
-	home.packages = [ pkgs.hypridle];
-	# services.hypridle = {
-	#     enable = true;
-	#     timeouts = [
-	#       {
-	#         timeout = 10;
-	#         command = "${pkgs.libnotify}/bin/notify-send 'Locking in 5 seconds' -t 5000";
-	#       }
-	#       {
-	#         timeout = 15;
-	#         command = "hyprlock";
-	#       }
-	#     ];
-	#     events = [
-	#       {
-	#         event = "before-sleep";
-	#         command = "hyprlock";
-	#       }
-	#     ];
-	#   };
+	home.packages = [ unstable.hypridle];
 }
