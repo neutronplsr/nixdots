@@ -57,12 +57,10 @@
 			};
 		};
 
-		overlays = {
-			unstable-packages = final: _prev: {
-			    unstable = import nixpkgs-unstable {
-			      system = "x86_64-linux";
-			    };
-		  	};
+		unstable-packages = final: _prev: {
+		    unstable = import nixpkgs-unstable {
+		    	system = "x86_64-linux";
+	    	};
 	  	};
 	};
 }
