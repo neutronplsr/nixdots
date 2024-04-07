@@ -44,7 +44,6 @@
 			];	
 		};
 		plugins = [
-#		inputs.hyprland-plugins.packages.${pkgs.system}.hyprlock
 			inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
 		];
 		extraConfig = builtins.readFile ./hyprland.conf;

@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:{
+{ inputs, config, pkgs, ...}:{
 	programs.home-manager.enable = true;
 	home.username = "neutron";
 	home.homeDirectory = "/home/neutron";
