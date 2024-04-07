@@ -6,8 +6,7 @@
 
 
 
-	home.file.".config/hypr/hyprlock.conf".text = ''
-
+	home.file."~/.config/hypr/hyprlock.conf".text = ''
 	general {
 	  disable_loading_bar = false
 	  grace = 0
