@@ -13,7 +13,7 @@
 		 hyprland.url = "github:hyprwm/Hyprland";
 		 hyprland-plugins = {
 		 	url = "github:hyprwm/hyprland-plugins";
-		 	 inputs.hyprland.follows = "hyprland";
+		 	inputs.hyprland.follows = "hyprland";
 	 	 };
 	};
 
@@ -46,9 +46,6 @@
 							./programs/fun.nix
 							./programs/school.nix												
 					];	}
-
-					hyprland.homeManagerModules.default
-					{wayland.windowManager.hyprland.enable = true;}
 				];
 			};
 			## this will be used when the host name of our device matches ---	
