@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }: {
+{ config, inputs, config, pkgs, ... }: {
 
 	programs.hyprlock = {
 		enable = true;
@@ -66,4 +66,6 @@
 	}
 	
 	'';
+	nixpkgs.overlays = [add-unstable-packages];
+	home.packges = with pkgs; [ unstable.hypridle ];
 }
