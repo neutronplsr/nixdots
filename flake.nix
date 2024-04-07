@@ -14,7 +14,7 @@
 	};
 
 	# defines outputs, our actual system
-	outputs = inputs@{ self, nixpkgs, home-manager, hyprland, ... }:
+	outputs = inputs@{ self, nixpkgs, home-manager, ... }:
 	## defines variables for our various sytems
 	let 
 		system = "x86_64-linux";
