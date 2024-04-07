@@ -1,11 +1,11 @@
-{ inputs, config, pkgs, ...}:{
+{ inputs, config, pkgs, outputs, ...}:{
 	programs.home-manager.enable = true;
 	home.username = "neutron";
 	home.homeDirectory = "/home/neutron";
 	home.stateVersion = "23.11";
 
 
-	nixpkgs.overlays = [ unstable-packages ];	
+	nixpkgs.overlays = [ outputs.unstable-packages ];	
 	# main packages for all systems
 	home.packages = with pkgs; [
 		## cli tools and core utilities
