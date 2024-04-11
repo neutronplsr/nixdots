@@ -4,7 +4,7 @@
 		enable = true;
 	};
 
-	home.file."~/.config/hypr/hyprlock.conf".text = ''
+	home.file.".config/hypr/hyprlock.conf".text = ''
 	general {
 	  disable_loading_bar = false
 	  grace = 0
@@ -26,8 +26,6 @@
 	  vibrancy = 0.168600
 	  vibrancy_darkness = 0.050000
 	}
-	
-	
 	
 	
 	input-field {
