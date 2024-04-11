@@ -4,7 +4,7 @@
 		enable = true;
 	};
 
-	home.file.".config/hypr/hyprlock.conf".source = ./hyprlock.conf
+	home.file.".config/hypr/hyprlock.conf".source = ./hyprlock.conf;
 	services.swayidle = {
 	    enable = true;
 	    timeouts = [
