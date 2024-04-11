@@ -75,7 +75,7 @@
 	      }
 	      {
 	        timeout = 10;
-	        command = "hyprlock";
+	        command = "${pkgs.libnotify}/bin/notify-send 'Locked' -t 5000";
 	      }
 	    ];
 	    events = [
