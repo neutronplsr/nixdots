@@ -14,7 +14,7 @@
 		
 		background {
 		  monitor = 
-		  path = echo './lock.png'
+		  path = echo 'lock.png'
 		  color = rgba(25, 20, 20, 1.0)
 		  blur_size = 8
 		  blur_passes = 0
