@@ -2,7 +2,7 @@
 
 	programs.hyprlock = {
 		enable = true;
-		config = "
+		extraConfig = "
 	general {
 		  disable_loading_bar = false
 		  grace = 0
