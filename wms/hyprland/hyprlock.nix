@@ -75,7 +75,7 @@
 	      }
 	      {
 	        timeout = 10;
-	        command = "./lock.sh";
+	        command = "/home/neutron/.nixdots/wms/hyprland/lock.sh";
 	      }
 	    ];
 	    events = [
