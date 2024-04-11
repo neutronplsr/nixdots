@@ -14,7 +14,7 @@
 		
 		background {
 		  monitor = 
-		  path = '/home/neutron/Pictures/wallpapers/chicoryyyy.jpg'
+		  path = echo '/home/neutron/Pictures/wallpapers/chicoryyyy.jpg'
 		  color = rgba(25, 20, 20, 1.0)
 		  blur_size = 8
 		  blur_passes = 0
