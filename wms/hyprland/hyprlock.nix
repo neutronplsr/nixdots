@@ -2,7 +2,7 @@
 
 	programs.hyprlock = {
 		enable = true;
-		extraConfig = ./hyprlock.conf
+		extraConfig = ./hyprlock.conf;
 	};
 
 	#home.file.".config/hypr/hyprlock.conf".source = ./hyprlock.conf;
