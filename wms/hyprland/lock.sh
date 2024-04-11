@@ -1,4 +1,5 @@
 #!/bin/sh
 
-${pkgs.libnotify}/bin/notify-send 'Locking now' -t 5000
-hyprlock
+#${pkgs.libnotify}/bin/notify-send 'Locking now' -t 5000
+#hyprlock
+exec kitty
