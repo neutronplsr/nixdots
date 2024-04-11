@@ -75,7 +75,7 @@
 	      }
 	      {
 	        timeout = 10;
-	        command = "/home/neutron/.nixdots/wms/hyprland/lock.sh";
+	        command = "${pkgs.kitty}/bin/kitty";
 	      }
 	    ];
 	    events = [
