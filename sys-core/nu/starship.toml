@@ -2,7 +2,7 @@ format = """
 [](#9399b2)\
 $os\
 $username\
-[](bg:#9399b2:#89b4fa)\
+[](bg:#9399b2:#9399b2)\
 $directory\
 [](fg:#7f849c bg:#f2cdcd)\
 $git_branch\
