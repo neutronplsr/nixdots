@@ -4,7 +4,7 @@ $os\
 $username\
 [](bg:#74c7ec fg:#b4befe)\
 $directory\
-[](fg:#5c5f77 bg:#74c7ec)\
+[](fg:#74c7ec bg:#7f849c)\
 $git_branch\
 $git_status\
 [](fg:#7f849c bg:#f2cdcd)\
