@@ -1,8 +1,8 @@
 format = """
-[](#ccd0da)\
+[](#4c4f69)\
 $os\
 $username\
-[](bg:#5c5f77:#ccd0da)\
+[](bg:#5c5f77:#4c4f69)\
 $directory\
 [](fg:#5c5f77 bg:#7f849c)\
 $git_branch\
