@@ -29,8 +29,8 @@ $time\
 
 [username]
 show_always = true
-style_user = "bg:#b4befe"
-style_root = "bg:#b4befe"
+style_user = "bg:#b4befe fg:#6c7086"
+style_root = "bg:#b4befe fg:#6c7086"
 format = '[$user ]($style)'
 disabled = false
 
