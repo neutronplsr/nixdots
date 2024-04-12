@@ -14,6 +14,7 @@
 		kitty				### terminal emulator
 		linuxHeaders		### used for dkms modules
 		wl-clipboard   		### clipboard manager
+		nushell				### shell
 
 		## gui apps and utilities 
 		bitwarden			### password manager
@@ -103,7 +104,9 @@
 			push 	= {autoSetupRemote = true;};	
 		};
 	};
-		
+
+
+	users.users.neutron.shell = pkkgs.nushell;
 	# modules to import
 	imports = [
 		## defines what WM configs to use
@@ -115,5 +118,9 @@
 #		./programs/micro/micro.nix
 		./programs/pcloud/pcloud.nix
 		./programs/vesktop/vesktop.nix	
+
+
+		## shell config
+		./sys-core/nu/nu.nix
 	];
 }
