@@ -70,19 +70,19 @@
 	    enable = true;
 	    timeouts = [
 	      {
-	        timeout = 5;
-	        command = "${pkgs.libnotify}/bin/notify-send 'Locking in 5 seconds' -t 5000";
+	        timeout = 600;
+	        command = "${pkgs.libnotify}/bin/notify-send 'Locking in 10 seconds' -t 5000";
 	      }
 	      {
-	        timeout = 10;
+	        timeout = 610;
 	        command = "${pkgs.kitty}/bin/kitty hyprlock";
 	      }
 	    ];
 	    events = [
-	      # {
-	      #   event = "before-sleep";
-	      #   command = "${pkgs.kitty}/bin/kitty hyprlock";
-	      # }
+	      {
+	         event = "before-sleep";
+	         command = "${pkgs.kitty}/bin/kitty hyprlock && systemctl suspend";
+	      }
 	      {
              event = "lock";
              command = "${pkgs.kitty}/bin/kitty hyprlock";
