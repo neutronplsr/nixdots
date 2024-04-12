@@ -1,8 +1,8 @@
 format = """
-[](#9399b2)\
+[](#eff1f5)\
 $os\
 $username\
-[](bg:#9399b2:#9399b2)\
+[](bg:#eff1f5:#eff1f5)\
 $directory\
 [](fg:#7f849c bg:#f2cdcd)\
 $git_branch\
@@ -29,8 +29,8 @@ $time\
 
 [username]
 show_always = true
-style_user = "bg:#9399b2"
-style_root = "bg:#9399b2"
+style_user = "bg:#eff1f5"
+style_root = "bg:#eff1f5"
 format = '[$user ]($style)'
 disabled = false
 
