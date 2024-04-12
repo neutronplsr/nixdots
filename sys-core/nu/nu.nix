@@ -34,12 +34,6 @@
    	programs.carapace.enableNushellIntegration = true;
 	programs.starship = { 
 		enable = true;
-		settings = {
-			add_newline = true;
-			haracter = { 
-		  		success_symbol = "[➜](bold green)";
-		  		error_symbol = "[➜](bold red)";
-			};
-   		};
+		settings = ./starship.toml
 	};
 }
