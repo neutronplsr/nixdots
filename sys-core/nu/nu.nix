@@ -3,7 +3,7 @@
 	programs.nushell = {
 		enable = true;
 		shellAliases = {};
-#		configFile.source = ./config.nu;
+		configFile.source = ./config.nu;
 		extraConfig = ''
 
 		$env.config = {
