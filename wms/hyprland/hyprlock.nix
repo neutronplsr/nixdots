@@ -82,7 +82,7 @@
 	    events = [
 	      {
 	        event = "before-sleep";
-	        command = "hyprlock";
+	        command = "${pkgs.kitty}/bin/kitty hyprlock";
 	      }
 	    ];
 	  };
