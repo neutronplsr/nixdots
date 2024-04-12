@@ -35,6 +35,6 @@
 	programs.starship = { 
 		enable = true;
 		settings = pkgs.lib.importTOML ../starship.toml;
-		enableNuShellIntegration = true;
+		enableNushellIntegration = true;
 	};
 }
