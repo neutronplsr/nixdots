@@ -2,7 +2,7 @@ format = """
 [](#9A348E)\
 $os\
 $username\
-[](bg:#89b4fa:#9A348E)\
+[](bg:#6c7086:#9A348E)\
 $directory\
 [](fg:#9A348E bg:#89b4fa)\
 $git_branch\
@@ -34,8 +34,8 @@ $time\
 # and use the os module below
 [username]
 show_always = true
-style_user = "bg:#9A348E"
-style_root = "bg:#9A348E"
+style_user = "bg:#6c7086"
+style_root = "bg:#6c7086"
 format = '[$user ]($style)'
 disabled = false
 
@@ -43,7 +43,7 @@ disabled = false
 # represents the current operating system
 [os]
 style = "bg:#9A348E"
-disabled = false # Disabled by default
+disabled = true # Disabled by default
 
 [directory]
 style = "bg:#89b4fa"
