@@ -79,10 +79,10 @@
 	      }
 	    ];
 	    events = [
-	      {
-	        event = "before-sleep";
-	        command = "${pkgs.kitty}/bin/kitty hyprlock";
-	      }
+	      # {
+	      #   event = "before-sleep";
+	      #   command = "${pkgs.kitty}/bin/kitty hyprlock";
+	      # }
 	      {
              event = "lock";
              command = "${pkgs.kitty}/bin/kitty hyprlock";
