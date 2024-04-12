@@ -20,9 +20,9 @@ $nodejs\
 $nim\
 $rust\
 $scala\
-[](fg:#f2cdcd bg:#06969A)\
+[](fg:#f2cdcd bg:#fab387)\
 $docker_context\
-[](fg:#06969A bg:#94e2d5)\
+[](fg:#fab387 bg:#94e2d5)\
 $time\
 [ ](fg:#94e2d5)\
 """
