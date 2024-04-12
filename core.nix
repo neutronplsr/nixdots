@@ -32,6 +32,7 @@
 		isNormalUser = true;
 		description = "Olivia Chiarini";
 		extraGroups = [ "networkmanager" "wheel" ];
+		shell = pkgs.nushell;
 	};
 	# allows non free software
 	nixpkgs.config.allowUnfree = true;
