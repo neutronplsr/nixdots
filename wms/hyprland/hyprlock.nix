@@ -1,5 +1,4 @@
 { inputs, config, pkgs, outputs, ... }: {
-
 	programs.hyprlock = {
 		enable = true;
 		extraConfig = "
@@ -84,9 +83,11 @@
 	        event = "before-sleep";
 	        command = "${pkgs.kitty}/bin/kitty hyprlock";
 	      }
+	      {
+             event = "lock";
+             command = "${pkgs.kitty}/bin/kitty hyprlock";
+          }
 	    ];
 	  };
-
-
 	  
 }
