@@ -76,7 +76,7 @@
 	      }
 	      {
 	        timeout = 10;
-	        command = "${pkgs.kitty}/bin/kitty";
+	        command = "${pkgs.hyprlock}/bin/hyprlock";
 	      }
 	    ];
 	    events = [
