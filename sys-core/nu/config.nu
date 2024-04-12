@@ -761,3 +761,8 @@ $env.config = {
 def nixUpdate [] {
 	~/.nixdots/update.sh
 }
+def homeUpdate [] {
+	git -C /home/neutron/.nixdots/ add .
+	sudo nixos-rebuild switch --flake /home/neutron/.nixdots/.
+}
+
