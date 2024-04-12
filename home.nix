@@ -106,7 +106,7 @@
 	};
 
 
-	users.users.neutron.shell = pkkgs.nushell;
+	users.users.neutron.shell = pkgs.nushell;
 	# modules to import
 	imports = [
 		## defines what WM configs to use
