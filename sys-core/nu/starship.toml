@@ -4,7 +4,7 @@ $os\
 $username\
 [](bg:#89b4fa:#89b4fa)\
 $directory\
-[](fg:#f5c2e7 bg:#f5c2e7)\
+[](fg:#f5c2e7 bg:#f2cdcd)\
 $git_branch\
 $git_status\
 [](fg:#585b70 bg:#86BBD8)\
@@ -39,7 +39,7 @@ style = "bg:#9A348E"
 disabled = true 
 
 [directory]
-style = "bg:#89b4fa"
+style = "bg:#f5c2e7"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
