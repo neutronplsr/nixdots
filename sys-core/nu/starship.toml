@@ -2,12 +2,12 @@ format = """
 [](#9A348E)\
 $os\
 $username\
-[](bg:#DA627D fg:#9A348E)\
+[](bg:#585b70 fg:#94e2d5)\
 $directory\
-[](fg:#DA627D bg:#FCA17D)\
+[](fg:#585b70 bg:#eba0ac)\
 $git_branch\
 $git_status\
-[](fg:#FCA17D bg:#86BBD8)\
+[](fg:#585b70 bg:#86BBD8)\
 $c\
 $elixir\
 $elm\

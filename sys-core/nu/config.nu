@@ -759,13 +759,5 @@ $env.config = {
 }
 
 def nixUpdate [] {
-	git -C /home/neutron/.nixdots/ add .
-	# git -C /home/neutron/.nixdots/ commit -m "automatic push from update"
-	# git -C /home/neutron/.nixdots/ push
-	git -C /home/neutron/.nixdots/ pull
-    nix flake update /home/neutron/.nixdots/.
-    sudo nixos-rebuild switch --flake /home/neutron/.nixdots/.
-    home-manager switch --flake /home/neutron/.nixdots/.	
-    nix-env --delete-generations +5
-    sudo /run/current-system/bin/switch-to-configuration boot
+	~/.nixdots/update.sh
 }
