@@ -72,11 +72,11 @@ format = '[ $symbol ($version) ]($style)'
 
 [git_branch]
 symbol = ""
-style = "bg:#f2cdcd"
+style = "bg:#cba6f7"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#f2cdcd"
+style = "bg:#cba6f7"
 format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
