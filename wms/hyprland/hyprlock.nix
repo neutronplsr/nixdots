@@ -80,7 +80,7 @@
 	    ];
 	    events = [
 	      {
-	         event = "before-sleep";
+	         event = "after-sleep";
 	         command = "${pkgs.kitty}/bin/kitty hyprlock && systemctl suspend";
 	      }
 	      {
