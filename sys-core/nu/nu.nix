@@ -34,6 +34,6 @@
    	programs.carapace.enableNushellIntegration = true;
 	programs.starship = { 
 		enable = true;
-		settings = ./starship.toml
+		settings = ./starship.toml;
 	};
 }
