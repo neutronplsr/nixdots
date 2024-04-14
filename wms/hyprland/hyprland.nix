@@ -128,6 +128,6 @@
 				repeat_delay = 250
 				numlock_by_default = true	
 			}
-		''
+		'';
 	};
 }
