@@ -61,11 +61,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1713120508,
-        "narHash": "sha256-piBUBQsQ8R20/lX9GMJjwdntal6yfJZMVCIi21XCZ8Y=",
+        "lastModified": 1713126795,
+        "narHash": "sha256-IX9N+WMMcdBsxjQFLHjBCwXByMt+0S8sL18dQ2QTzvI=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "e93fbd7c4f991cb8ef03e433ccc4d43587923e15",
+        "rev": "67f47fbdccd639502a76ccb3552a23df37f19ef8",
         "type": "github"
       },
       "original": {
@@ -157,11 +157,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1713108567,
-        "narHash": "sha256-bisSpw8oaUvEBDiqw7/MlJX9Lqb6su3Whs7pAFxykfY=",
+        "lastModified": 1713121246,
+        "narHash": "sha256-502X0Q0fhN6tJK7iEUA8CghONKSatW/Mqj4Wappd++0=",
         "owner": "hyprwm",
         "repo": "hyprlang",
-        "rev": "748fb531cac72edec922e4a577e9ee5d8d577c6d",
+        "rev": "78fcaa27ae9e1d782faa3ff06c8ea55ddce63706",
         "type": "github"
       },
       "original": {
@@ -246,11 +246,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1712867921,
-        "narHash": "sha256-edTFV4KldkCMdViC/rmpJa7oLIU8SE/S35lh/ukC7bg=",
+        "lastModified": 1713013257,
+        "narHash": "sha256-ZEfGB3YCBVggvk0BQIqVY7J8XF/9jxQ68fCca6nib+8=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "51651a540816273b67bc4dedea2d37d116c5f7fe",
+        "rev": "90055d5e616bd943795d38808c94dbf0dd35abe8",
         "type": "github"
       },
       "original": {
@@ -332,17 +332,17 @@
     "wlroots": {
       "flake": false,
       "locked": {
-        "lastModified": 1712935342,
-        "narHash": "sha256-zzIbTFNFd/as42jyGx23fil2uBDYYv+8GA5JmRq5y9c=",
+        "lastModified": 1713124002,
+        "narHash": "sha256-vPeZCY+sdiGsz4fl3AVVujfyZyQBz6+vZdkUE4hQ+HI=",
         "owner": "hyprwm",
         "repo": "wlroots-hyprland",
-        "rev": "62eeffbe233d199f520a5755c344e85f8eab7940",
+        "rev": "611a4f24cd2384378f6e500253983107c6656c64",
         "type": "github"
       },
       "original": {
         "owner": "hyprwm",
         "repo": "wlroots-hyprland",
-        "rev": "62eeffbe233d199f520a5755c344e85f8eab7940",
+        "rev": "611a4f24cd2384378f6e500253983107c6656c64",
         "type": "github"
       }
     },

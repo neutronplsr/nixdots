@@ -49,16 +49,16 @@
 			];
 			
 			### mouse and trackpad settings
-			input = [
-				touchpad = [
-					natural_scroll = yes;
-					disable_while_typing = true;
-					clickfinger_behavior = true;
-					scroll_factor = 0.5;
-				];
-				repeat_delay = 250;
-				numlock_by_default = false;
-			];
+			# input = [
+			# 	touchpad = [
+			# 		natural_scroll = yes;
+			# 		disable_while_typing = true;
+			# 		clickfinger_behavior = true;
+			# 		scroll_factor = 0.5;
+			# 	];
+			# 	repeat_delay = 250;
+			# 	numlock_by_default = false;
+			# ];
 			### display settings
 			monitor = [
 				", preffered, 0x0, 1"	
@@ -113,6 +113,14 @@
 				"$mod, 8, workspace, 8"
 				"$mod, 9, workspace, 9"
 				"$mod, 0, workspace, 0"
+
+				"$mod control, right, workspace, +1"
+				"$mod control, left, workspace, -1"
+				"$mod control, up, workspace, -5"
+				"$mod control, down, workspace, +5"
+
+
+				
 			];
 			### mouse bindings	
 			bindm = [
