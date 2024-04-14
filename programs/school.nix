@@ -6,5 +6,6 @@
 		chromium	## web browser for school accounts
 		gnuastro	## astro research programs
 		conda		## python virtual envs
+		qtwayland
   ];	
 }
