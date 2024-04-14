@@ -42,6 +42,7 @@
 				"$mod shift, f, exec, firefox"
 				"$mod shift, s, exec, grimblast copysave area ~/Pictures/Screenshots/$(date +\"%FT%H%M%z\").png"
 				"$mod, return, exec, kitty"
+				"$mod, R, exec, rofi -show drun"
 
 				"$mod shift, left, movewindow,  l"
 				"$mod shift, right, movewindow, r"
@@ -55,9 +56,19 @@
 				"$mod, BracketLeft, movefocus, l"
 				"$mod, BracketRight, movefocus, r"
 
+				"$mod, Equal, splitratio, 0.1"
+				"$mod, Minus, splitratio, -0.1"
+				"$mod, Apostrophe, splitratio, 0.1"
+				"$mod, Semicolon, splitratio, -0.1"
+
+				"$mod, mouse:272, movewindow"
+				"$mod, mouse:273, resizewindow"
+
 				"$mod, f, fullscreen, 0"
 				"$mod, d, fullscreen, 1"
 
+				"$mod, W, killactive"
+				
 				"$mod shift, 1, movetoworkspacesilent, 1"
 				"$mod shift, 2, movetoworkspacesilent, 2"
 				"$mod shift, 3, movetoworkspacesilent, 3"
