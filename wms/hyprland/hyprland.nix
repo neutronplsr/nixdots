@@ -36,6 +36,7 @@
 				"kitty"
 				"pcloud"
 				"mullvad-gui"
+				"hyprpaper"
 			];
 			bind = [
 				"$mod shift, f, exec, firefox"
@@ -53,7 +54,31 @@
 				"$mod, up,movefocus,  d"
 				"$mod, BracketLeft, movefocus, l"
 				"$mod, BracketRight, movefocus, r"
-				
+
+				"$mod, f, fullscreen, 0"
+				"$mod, d, fullscreen, 1"
+
+				"$mod shift, 1, movetoworkspacesilent, 1"
+				"$mod shift, 2, movetoworkspacesilent, 2"
+				"$mod shift, 3, movetoworkspacesilent, 3"
+				"$mod shift, 4, movetoworkspacesilent, 4"
+				"$mod shift, 5, movetoworkspacesilent, 5"
+				"$mod shift, 6, movetoworkspacesilent, 6"
+				"$mod shift, 7, movetoworkspacesilent, 7"
+				"$mod shift, 8, movetoworkspacesilent, 8"
+				"$mod shift, 9, movetoworkspacesilent, 9"
+				"$mod shift, 0, movetoworkspacesilent, 0"
+
+				"$mod, 1, workspace, 1"
+				"$mod, 2, workspace, 2"
+				"$mod, 3, workspace, 3"
+				"$mod, 4, workspace, 4"
+				"$mod, 5, workspace, 5"
+				"$mod, 6, workspace, 6"
+				"$mod, 7, workspace, 7"
+				"$mod, 8, workspace, 8"
+				"$mod, 9, workspace, 9"
+				"$mod, 0, workspace, 0"
 			];	
 		};
 		extraConfig = builtins.readFile ./hyprland.conf;
