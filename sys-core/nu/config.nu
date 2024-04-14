@@ -767,5 +767,6 @@ def homeUpdate [] {
 }
 
 def nuConda [] {
-	nix-shell ~/.nixdots/programs/conda.nix
+	conda-shell
+	nu
 }
