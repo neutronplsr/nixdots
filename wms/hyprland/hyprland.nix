@@ -47,7 +47,8 @@
 				"XDG_SESSION_DESKTOP, Hyprland"
 				"GDK_BACKEND,wayland,x11"
 			];
-			### mouse/trackpad settings
+			
+			### mouse and trackpad settings
 			input = [
 				touchpad = [
 					natural_scroll = yes;
