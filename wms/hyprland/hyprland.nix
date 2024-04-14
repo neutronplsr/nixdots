@@ -21,6 +21,7 @@
 		XDG_SESSION_TYPE = "wayland";	
 		XDG_SESSION_DESKTOP = "Hyprland";
 		GDK_BACKEND = "wayland,x11";	
+		QT_QPA_PLATFORM="wayland";
 	};
 	## hyprland settings
 	 wayland.windowManager.hyprland = {
