@@ -46,18 +46,7 @@
 				"XDG_SESSION_DESKTOP, Hyprland"
 				"GDK_BACKEND,wayland,x11"
 			];
-			
-			### mouse and trackpad settings
-			input = [
-				touchpad = [
-					natural_scroll = yes;
-					disable_while_typing = true;
-					clickfinger_behavior = true;
-					scroll_factor = 0.5;
-				];
-				repeat_delay = 250;
-				numlock_by_default = false;
-			];
+
 			### display settings
 			monitor = [
 				", preffered, 0x0, 1"	
