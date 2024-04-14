@@ -767,5 +767,5 @@ def homeUpdate [] {
 }
 
 def nuConda [] {
-	use /home/neutron/.nixdots/sys-core/nu/conda.nu
+	nix-shell ~/.nixdots/programs/conda.nix
 }
