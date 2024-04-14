@@ -767,5 +767,5 @@ def homeUpdate [] {
 }
 
 def nuConda [] {
-	conda-shell; nu
+	conda-shell -c nu
 }
