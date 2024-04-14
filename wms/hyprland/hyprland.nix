@@ -41,6 +41,19 @@
 				"$mod shift, f, exec, firefox"
 				"$mod shift, s, exec, grimblast copysave area ~/Pictures/Screenshots/$(date +\"%FT%H%M%z\").png"
 				"$mod, return, exec, kitty"
+
+				"$mod shift, left, movewindow,  l"
+				"$mod shift, right, movewindow, r"
+				"$mod shift, up, movewindow, u"
+				"$mod shift, down, movewindow, d"
+				
+				"$mod, left, movefocus,  l"
+				"$mod, right,movefocus,  r"
+				"$mod, up,movefocus,  u"
+				"$mod, up,movefocus,  d"
+				"$mod, BracketLeft, movefocus, l"
+				"$mod, BracketRight, movefocus, r"
+				
 			];	
 		};
 		extraConfig = builtins.readFile ./hyprland.conf;
