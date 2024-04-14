@@ -31,6 +31,7 @@
 	 	systemd.enable = true;
 	 	settings = {
 			"$mod" = "SUPER";
+			### startup apps
 			"exec-once" = [
 				"waybar"
 				"kitty"
@@ -38,6 +39,30 @@
 				"mullvad-gui"
 				"hyprpaper"
 			];
+
+			### enviorment variables
+			env = [
+				"XDG_CURRENT_DESKTOP, Hyprland"
+				"XDG_SESSION_TYPE, wayland"
+				"XDG_SESSION_DESKTOP, Hyprland"
+				"GDK_BACKEND,wayland,x11"
+			];
+			### mouse/trackpad settings
+			input = [
+				touchpad = [
+					natural_scroll = yes;
+					disable_while_typing = true;
+					clickfinger_behavior = true;
+					scroll_factor = 0.5;
+				];
+				repeat_delay = 250;
+				numlock_by_default = false;
+			];
+			### display settings
+			monitor = [
+				", preffered, 0x0, 1"	
+			];
+			### keyboard bindings
 			bind = [
 				"$mod shift, f, exec, firefox"
 				"$mod shift, s, exec, grimblast copysave area ~/Pictures/Screenshots/$(date +\"%FT%H%M%z\").png"
@@ -88,7 +113,7 @@
 				"$mod, 9, workspace, 9"
 				"$mod, 0, workspace, 0"
 			];
-			## mouse bindings	
+			### mouse bindings	
 			bindm = [
 				"$mod, mouse:272, movewindow"
 				"$mod, mouse:273, resizewindow"
