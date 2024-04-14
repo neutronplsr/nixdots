@@ -1,5 +1,4 @@
 { inputs, config, pkgs, outputs, ... }: {
-
 	home.packages = with pkgs; [
 		rofi		## app launcher
 		dunst		## notfication deamon	
@@ -49,16 +48,16 @@
 			];
 			
 			### mouse and trackpad settings
-			# input = [
-			# 	touchpad = [
-			# 		natural_scroll = yes;
-			# 		disable_while_typing = true;
-			# 		clickfinger_behavior = true;
-			# 		scroll_factor = 0.5;
-			# 	];
-			# 	repeat_delay = 250;
-			# 	numlock_by_default = false;
-			# ];
+			input = [
+				touchpad = [
+					natural_scroll = yes;
+					disable_while_typing = true;
+					clickfinger_behavior = true;
+					scroll_factor = 0.5;
+				];
+				repeat_delay = 250;
+				numlock_by_default = false;
+			];
 			### display settings
 			monitor = [
 				", preffered, 0x0, 1"	
@@ -128,6 +127,18 @@
 				"$mod, mouse:273, resizewindow"
 			];
 		};
-		extraConfig = builtins.readFile ./hyprland.conf;
+		extraConfig = ''
+			input {
+				touchpad {
+					natural_scroll = yes
+					disable_while_typing = true
+					clickfinger_behavior = true
+					scroll_factor = 0.5
+				}
+				repeat_delay = 250
+				repeat_delay = 250
+				numlock_by_default = true	
+			}
+		''
 	};
 }
