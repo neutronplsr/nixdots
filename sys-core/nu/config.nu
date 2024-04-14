@@ -766,4 +766,6 @@ def homeUpdate [] {
 	sudo nixos-rebuild switch --flake /home/neutron/.nixdots/.
 }
 
-use /home/neutron/.nixdots/sys-core/nu/conda.nu
+def nuConda [] {
+	use /home/neutron/.nixdots/sys-core/nu/conda.nu
+}
