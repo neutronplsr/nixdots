@@ -61,9 +61,6 @@
 				"$mod, Apostrophe, splitratio, 0.1"
 				"$mod, Semicolon, splitratio, -0.1"
 
-				"$mod, mouse:272, movewindow"
-				"$mod, mouse:273, resizewindow"
-
 				"$mod, f, fullscreen, 0"
 				"$mod, d, fullscreen, 1"
 
@@ -90,7 +87,12 @@
 				"$mod, 8, workspace, 8"
 				"$mod, 9, workspace, 9"
 				"$mod, 0, workspace, 0"
-			];	
+			];
+			## mouse bindings	
+			bindm = [
+				"$mod, mouse:272, movewindow"
+				"$mod, mouse:273, resizewindow"
+			];
 		};
 		extraConfig = builtins.readFile ./hyprland.conf;
 	};
