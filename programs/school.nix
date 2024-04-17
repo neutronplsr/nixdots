@@ -9,6 +9,6 @@
 		libsForQt5.qt5.qtwayland
 		python3
 		python312Packages.pip
-		python312Packages.pipx
+#		python312Packages.pipx
   ];	
 }
