@@ -3,7 +3,7 @@
 	home.packages = with pkgs; [
 		vscodium	## ide
 		stellarium	## fun visual astronomy tool
-		chromium	## web browser for school accounts
+		google-chrome	## web browser for school accounts
 		gnuastro	## astro research programs
 		conda		## python virtual envs
 		libsForQt5.qt5.qtwayland
