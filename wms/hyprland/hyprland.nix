@@ -132,6 +132,9 @@
 				repeat_delay = 250
 				numlock_by_default = true	
 			}
+			general {
+				 col.active_border = rgba(94e2d5ee) rgba(89dcebee)
+			}
 		'';
 	};
 }
