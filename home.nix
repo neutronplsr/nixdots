@@ -25,7 +25,9 @@
 		obsidian			### note taking/organization
 		pavucontrol			### audio manager
 #		pcloud				### cloud file backups/storage, currently broken so a module must be used.
-		vesktop				### discord with custom client and wayland fixes
+		(pkgs.discord.override {
+						  withVencord = true;
+		})				### discord with custom client and wayland fixes
 		
 		## theming
 		catppuccin-gtk		### gui theme for gtk supported apps
