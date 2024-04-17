@@ -119,24 +119,21 @@
 				"$mod, mouse:272, movewindow"
 				"$mod, mouse:273, resizewindow"
 			];
+			general = {
+				 "col.active_border" = "rgba(94e2d5ee) rgba(89dcebee)";
+				 "col.inactive_border" = "rgba(6c7086ee)";
+				 "border_size" = 2;
+			};
+			input   = {
+				touchpad = {
+					natural_scroll = "yes";
+					disable_while_typing = true;
+					clickfinger_behavior = true;
+					scroll_factor = 0.5;
+				};
+				repeat_delay = 250;
+				numlock_by_default = true;
+			};
 		};
-		extraConfig = ''
-			input {
-				touchpad {
-					natural_scroll = yes
-					disable_while_typing = true
-					clickfinger_behavior = true
-					scroll_factor = 0.5
-				}
-				repeat_delay = 250
-				repeat_delay = 250
-				numlock_by_default = true	
-			}
-			general {
-				 col.active_border = rgba(94e2d5ee) rgba(89dcebee)
-				 col.inactive_border = rgba(181825ee)
-				 border_size = 2
-			}
-		'';
 	};
 }
