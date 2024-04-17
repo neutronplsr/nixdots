@@ -769,3 +769,8 @@ def homeUpdate [] {
 def nuConda [] {
 	conda-shell -c nu
 }
+def nixCleanup [] {
+	nix-collect-garbage  --delete-old
+	sudo nix-collect-garbage -d
+	sudo /run/current-system/bin/switch-to-configuration boot
+}
