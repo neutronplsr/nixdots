@@ -134,6 +134,8 @@
 			}
 			general {
 				 col.active_border = rgba(94e2d5ee) rgba(89dcebee)
+				 col.inactive_border = rgba(181825ee)
+				 border_size = 5
 			}
 		'';
 	};
