@@ -8,8 +8,7 @@
 		conda		## python virtual envs
 		libsForQt5.qt5.qtwayland
 		python3
-		python
-		pipx
-		pip
+		python312Packages.pip
+		python312Packages.pipx
   ];	
 }
