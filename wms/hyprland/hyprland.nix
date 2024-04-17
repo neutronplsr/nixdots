@@ -108,8 +108,8 @@
 				"$mod control, up, workspace, -5"
 				"$mod control, down, workspace, +5"
 				
-				"$mod shift, B, exec, brightnessctl set 5-"
-				"$mod shift, N, exec, brightnessctl set 5+"
+				"$mod shift, B, exec, brightnessctl set 5%-"
+				"$mod shift, N, exec, brightnessctl set 5%+"
 
 
 				
