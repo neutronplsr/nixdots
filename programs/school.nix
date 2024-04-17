@@ -7,6 +7,8 @@
 		gnuastro	## astro research programs
 		conda		## python virtual envs
 		libsForQt5.qt5.qtwayland
+		libsForQt5.kwayland
+		libsForQt5.kwayland-integration
 		python3
 #		python311Packages.pip
 		python312Packages.pipx
