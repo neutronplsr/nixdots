@@ -13,8 +13,8 @@
 #		python311Packages.pip
 		python312Packages.pipx
 #		python312Packages.astropy
-		python312Packages.scipy
-		python312Packages.matplotlib
+		python-packages.scipy
+		python-packages.matplotlib
 #		python312Packages.
 		
 		
