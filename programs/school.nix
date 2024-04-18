@@ -10,13 +10,7 @@
 		libsForQt5.kwayland
 		libsForQt5.kwayland-integration
 		python3
-#		python311Packages.pip
-		python312Packages.pipx
-#		python312Packages.astropy
-		python-packages.scipy
-		python-packages.matplotlib
-#		python312Packages.
-		
-		
+		python312Packages.pipx		
+		gcc-unwrapped
   ];	
 }
