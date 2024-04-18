@@ -41,7 +41,7 @@
 		git
 		wget
 		micro
-		qt5.wayland
+		qt5.qtwayland
 	];
 	# allows for flakes and home-manager to be used
 	nix.settings.experimental-features  = [ "nix-command" "flakes" ]; 
