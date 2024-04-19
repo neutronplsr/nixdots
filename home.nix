@@ -111,7 +111,7 @@
 	# java settings
 	programs.java = {
 		enable = true;
-	}
+	};
 
 	# modules to import
 	imports = [
