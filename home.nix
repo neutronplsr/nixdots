@@ -16,8 +16,7 @@
 		wl-clipboard   		### clipboard manager
 		nushell				### shell
 		steam-run			### allows running of random binaries
-		java
-
+		
 		## gui apps and utilities 
 		bitwarden			### password manager
 		feh					### image viewer
@@ -108,6 +107,11 @@
 			push 	= {autoSetupRemote = true;};	
 		};
 	};
+
+	# java settings
+	programs.java = {
+		enable = true;
+	}
 
 	# modules to import
 	imports = [
