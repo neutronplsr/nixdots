@@ -15,6 +15,7 @@
 		linuxHeaders		### used for dkms modules
 		wl-clipboard   		### clipboard manager
 		nushell				### shell
+		steam-run			### allows running of random binaries
 
 		## gui apps and utilities 
 		bitwarden			### password manager
