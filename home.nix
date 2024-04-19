@@ -26,6 +26,7 @@
 		pavucontrol			### audio manager
 #		pcloud				### cloud file backups/storage, currently broken so a module must be used.
 		vesktop				### discord with custom client and wayland fixes
+		blueman				### blueooth manager
 		
 		## theming
 		catppuccin-gtk		### gui theme for gtk supported apps
