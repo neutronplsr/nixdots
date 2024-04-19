@@ -27,6 +27,7 @@
 #		pcloud				### cloud file backups/storage, currently broken so a module must be used.
 		vesktop				### discord with custom client and wayland fixes
 		blueman				### blueooth manager
+		spotify				### music player
 		
 		## theming
 		catppuccin-gtk		### gui theme for gtk supported apps
