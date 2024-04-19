@@ -51,6 +51,7 @@
 			### display settings
 			monitor = [
 				", preffered, 0x0, 1"	
+				", preffered, 0x1080, 1"	
 			];
 			### keyboard bindings
 			bind = [
