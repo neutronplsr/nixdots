@@ -16,6 +16,7 @@
 		wl-clipboard   		### clipboard manager
 		nushell				### shell
 		steam-run			### allows running of random binaries
+		unzip				### unzips zips
 		
 		## gui apps and utilities 
 		bitwarden			### password manager
