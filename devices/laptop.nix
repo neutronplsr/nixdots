@@ -69,6 +69,11 @@
 		yubicoAuth 	= true;
 		u2fAuth 	= true;
     };
+    swaylock = { 
+		yubicoAuth 	= true;
+		u2fAuth 	= true;
+    };
+
   };
   security.pam.yubico = {
   	enable = true;
