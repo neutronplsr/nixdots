@@ -17,6 +17,7 @@
 		nushell				### shell
 		steam-run			### allows running of random binaries
 		unzip				### unzips zips
+		wireplumber			### audio cli tool
 		
 		## gui apps and utilities 
 		bitwarden			### password manager
