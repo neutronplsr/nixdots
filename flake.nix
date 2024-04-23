@@ -28,7 +28,6 @@
 		system = "x86_64-linux";
 		lib = nixpkgs.lib;
 		pkgs= nixpkgs.legacyPackages.${system};
-		flake-overlays = [];
 	in {
 		nixosConfigurations = {
 			## this will be used when the host name of our device matches livova-laptop
@@ -37,8 +36,8 @@
 				inherit system;
 				modules = [
 					## imports our  main configuration file for nix with overlays
-					(import ./core.nix flake-overlays)
-
+					./core.nix
+					
 					## imports our hardware configuration for this device
 					./devices/laptop.nix
 					

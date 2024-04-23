@@ -77,8 +77,6 @@
 			"electron-25.9.0"
 	];
 
-
-	nixpkgs.overlays = flake-overlays;
 	# core things no system should go without
 	environment.systemPackages = with pkgs; [
 		git
