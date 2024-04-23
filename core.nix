@@ -86,3 +86,22 @@
 			"electron-25.9.0"
 	];
 }
+
+
+flake-overlays:
+
+{ config, pkgs, options, lib, ... }:
+{
+  nixpkgs.overlays = [
+    (
+      final: prev: {
+        # Your own overlays...
+      }
+    )
+  ] ++ flake-overlays;
+  environment.systemPackages = with pkgs; [
+    # Other packages
+    matlab
+    # More packages
+  ];
+}

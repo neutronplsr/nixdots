@@ -24,7 +24,7 @@ _: { mainBar = {
 	modules-center = [ "clock" ];
 
 	"clock" = {
-		format = "{:󰥔 %R} %m-%d";
+		format = "{:󰥔 %R %m-%d} ";
 		tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
 	};
 

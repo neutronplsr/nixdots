@@ -15,20 +15,29 @@
 		    url = "github:hyprwm/hyprland-plugins";
 		    inputs.hyprland.follows = "hyprland";
 	  	};
-	  	hyprlock.url = "github:hyprwm/Hyprlock";
 	  	hyprlang = {
 	  	      url = "github:hyprwm/hyprlang";
 	  	      inputs.nixpkgs.follows = "nixpkgs";
   	    };
+
+  	    nix-matlab = {
+  	        # Recommended if you also override the default nixpkgs flake, common among
+  	        # nixos-unstable users:
+  	        #inputs.nixpkgs.follows = "nixpkgs";
+  	        url = "gitlab:doronbehar/nix-matlab";
+  	      };
 	};
 
 	# defines outputs, our actual system
-	outputs = inputs@{ self, nixpkgs, home-manager, hyprland, hyprlock, ... }:
+	outputs = inputs@{ self, nixpkgs, home-manager, hyprland, nix-matlab, ... }:
 	## defines variables for our various sytems
 	let 
 		system = "x86_64-linux";
 		lib = nixpkgs.lib;
 		pkgs= nixpkgs.legacyPackages.${system};
+		flake-overlays = [
+			nix-matlab.overlay	
+		];
 	in {
 		nixosConfigurations = {
 			## this will be used when the host name of our device matches livova-laptop
@@ -40,6 +49,9 @@
 					./core.nix
 					## imports our hardware configuration for this device
 					./devices/laptop.nix
+					
+					(import ./core.nix flake-overlays)
+
 					## allows home-manager to set theming and packages
 					home-manager.nixosModules.home-manager {
 						home-manager.useGlobalPkgs = true;
@@ -50,7 +62,6 @@
 					{home-manager.users.neutron.imports = [
 							./programs/fun.nix
 							./programs/school.nix	
-						 	hyprlock.homeManagerModules.hyprlock											
 					];	}
 				];
 			};
