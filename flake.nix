@@ -28,9 +28,7 @@
 		system = "x86_64-linux";
 		lib = nixpkgs.lib;
 		pkgs= nixpkgs.legacyPackages.${system};
-		flake-overlays = [
-
-		];
+		flake-overlays = [];
 	in {
 		nixosConfigurations = {
 			## this will be used when the host name of our device matches livova-laptop
