@@ -1,4 +1,3 @@
-flake-overlays:
 { config, pkgs, ... }:{
 	# enable wifi and general networking
 	networking.networkmanager.enable = true;
