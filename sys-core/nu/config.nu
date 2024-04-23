@@ -768,7 +768,6 @@ def homeUpdate [] {
 
 def nuConda [] {
 	conda-shell -c "nu"
-	source ~/.nixdots/sys-core/nu/conda.nu
 }
 def nixCleanup [] {
 	nix-collect-garbage  --delete-old
