@@ -38,15 +38,6 @@ flake-overlays:
 	};
 	# allows non free software
 	nixpkgs.config.allowUnfree = true;
-	# core things no system should go without
-	environment.systemPackages = with pkgs; [
-		git
-		wget
-		micro
-		qt5.qtwayland
-		libsForQt5.qt5.qtwayland
-      	qt6.qtwayland
-	];
 	# allows for flakes and home-manager to be used
 	nix.settings.experimental-features  = [ "nix-command" "flakes" ]; 
 	# prevents annoying messages when updating
@@ -90,8 +81,14 @@ flake-overlays:
 
 
 	nixpkgs.overlays = flake-overlays;
+		# core things no system should go without
 	environment.systemPackages = with pkgs; [
-	    matlab
-    ];
-	
+		git
+		wget
+		micro
+		qt5.qtwayland
+		libsForQt5.qt5.qtwayland
+      	qt6.qtwayland
+    	matlab
+	];	
 }
