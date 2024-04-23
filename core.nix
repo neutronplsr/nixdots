@@ -1,6 +1,6 @@
 flake-overlays:
 
-{ config, pkgs, options, lib ... }:{
+{ config, pkgs, options, lib, ... }:{
 	# enable wifi and general networking
 	networking.networkmanager.enable = true;
 	# define all locale vars
