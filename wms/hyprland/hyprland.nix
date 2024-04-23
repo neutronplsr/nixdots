@@ -5,6 +5,7 @@
 		waybar		## task bar
 		hyprpaper	## wallpaper manager
 		grimblast	## screenshot tool
+		swaylock	## screenlocker tool
 	];
 		
 	imports = [
