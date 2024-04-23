@@ -21,9 +21,7 @@
   	    };
 
   	    nix-matlab = {
-  	        # Recommended if you also override the default nixpkgs flake, common among
-  	        # nixos-unstable users:
-  	        #inputs.nixpkgs.follows = "nixpkgs";
+  	        inputs.nixpkgs.follows = "nixpkgs";
   	        url = "gitlab:doronbehar/nix-matlab";
   	      };
 	};
@@ -45,13 +43,12 @@
 				## uses variable defined above
 				inherit system;
 				modules = [
-					## imports our  main configuration file for nix
-					./core.nix
+					## imports our  main configuration file for nix with overlays
+					(import ./core.nix flake-overlays)
+
 					## imports our hardware configuration for this device
 					./devices/laptop.nix
 					
-					(import ./core.nix flake-overlays)
-
 					## allows home-manager to set theming and packages
 					home-manager.nixosModules.home-manager {
 						home-manager.useGlobalPkgs = true;
