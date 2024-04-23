@@ -774,4 +774,11 @@ def nixCleanup [] {
 	sudo nix-collect-garbage -d
 	sudo /run/current-system/bin/switch-to-configuration boot
 }
+def dataTest [] {
+	rm analysis \/\*
+	python fits-test.py -r 15 -o analysis -d ~/Documents/spacestuff/fits/fakeFit  -c calibration -length 50 -S 0 --level DEBUG
+	
+	
+}
+
 source ~/.nixdots/sys-core/nu/conda.nu
