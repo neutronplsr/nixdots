@@ -775,4 +775,4 @@ def nixCleanup [] {
 	sudo nix-collect-garbage -d
 	sudo /run/current-system/bin/switch-to-configuration boot
 }
-source /home/neutron/.nixdots/sys-core/nu/conda.nu
+# source /home/neutron/.nixdots/sys-core/nu/conda.nu
