@@ -1,4 +1,8 @@
-{ config, pkgs, ...}: {	
+{ inputs, config, pkgs, outputs, ... }: {
+	home.packages = with pkgs; [
+		swaylock-effects	## screenlocker tool
+	];
+
 	services.swayidle = {
 	    enable = true;
 	    timeouts = [
@@ -12,14 +16,14 @@
 	      }
 	    ];
 	    events = [
-	      {
-	        event = "after-resume";
-	        command = "${pkgs.swaylock}/bin/swaylock";
-	      }
-	      {
-	      	event = "lock";
-	        command = "${pkgs.swaylock}/bin/swaylock";
-	      }
-	    ];
-	  };	  
+	     	{
+	        	event = "after-resume";
+	        	command = "${pkgs.swaylock}/bin/swaylock";
+	      	}
+	      	{
+	      		event = "lock";
+	        	command = "${pkgs.swaylock}/bin/swaylock";
+        	}
+		];
+	};	  
 }
