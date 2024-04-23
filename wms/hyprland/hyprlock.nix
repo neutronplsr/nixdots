@@ -75,17 +75,17 @@
 	      }
 	      {
 	        timeout = 610;
-	        command = "${pkgs.kitty}/bin/kitty hyprlock";
+	        command = "${pkgs.swaylock}/bin/swaylock";
 	      }
 	    ];
 	    events = [
-	      {
-	         event = "after-resume";
-	         command = "${pkgs.kitty}/bin/kitty hyprlock && systemctl suspend";
-	      }
+	      # {
+	      #    event = "after-resume";
+	      #    command = "${pkgs.swaylock}/bin/swaylock";
+	      # }
 	      {
              event = "lock";
-             command = "${pkgs.kitty}/bin/kitty hyprlock";
+             command = "${pkgs.swaylock}/bin/swaylock";
           }
 	    ];
 	  };
