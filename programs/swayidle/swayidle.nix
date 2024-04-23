@@ -5,7 +5,7 @@
 
 	services.swayidle = 
 	let 
-	lockCommand = "${pkgs.swaylock}/bin/swaylock   swaylock --clock  --indicator 	--indicator-radius 100--indicator-thickness 7 --effect-blur 7x5 	--effect-vignette 0.5:0.5 	--ring-color bb00cc 	--key-hl-color 880033 	--line-color 00000000 	--inside-color 00000088 --separator-color 00000000 --fade-in 0.2";
+	lockCommand = "${pkgs.swaylock}/bin/swaylock --screenshots --clock --indicator --effect-blur 2x10 --text-color cdd6f4";
 	in {
 	    enable = true;
 	    timeouts = [
