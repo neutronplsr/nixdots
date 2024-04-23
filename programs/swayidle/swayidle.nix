@@ -3,7 +3,12 @@
 		swaylock-effects	## screenlocker tool
 	];
 
-	services.swayidle = {
+	services.swayidle = 
+	let 
+	lockCommand = "${pkgs.swaylock}/bin/swaylock   \
+					--clock\
+					--indicator ";
+	in {
 	    enable = true;
 	    timeouts = [
 	      {
@@ -12,18 +17,19 @@
 	      }
 	      {
 	        timeout = 120;
-	        command = "${pkgs.swaylock}/bin/swaylock";
+	        command = lockCommand;
 	      }
 	    ];
 	    events = [
 	     	{
 	        	event = "after-resume";
-	        	command = "${pkgs.swaylock}/bin/swaylock";
+	        	command = lockCommand;
 	      	}
 	      	{
 	      		event = "lock";
-	        	command = "${pkgs.swaylock}/bin/swaylock";
+	        	command = lockCommand;
         	}
 		];
 	};	  
+	
 }
