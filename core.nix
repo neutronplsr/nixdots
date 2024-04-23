@@ -87,5 +87,5 @@
 	];
 
 
-	nixpkgs.overlays = flake-overlays
+	nixpkgs.overlays = flake-overlays;
 }
