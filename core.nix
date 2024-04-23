@@ -1,5 +1,3 @@
-flake-overlays:
-
 { config, pkgs, options, lib, ... }:{
 	# enable wifi and general networking
 	networking.networkmanager.enable = true;
@@ -81,7 +79,7 @@ flake-overlays:
 
 
 	nixpkgs.overlays = flake-overlays;
-		# core things no system should go without
+	# core things no system should go without
 	environment.systemPackages = with pkgs; [
 		git
 		wget
@@ -89,6 +87,5 @@ flake-overlays:
 		qt5.qtwayland
 		libsForQt5.qt5.qtwayland
       	qt6.qtwayland
-    	matlab
 	];	
 }

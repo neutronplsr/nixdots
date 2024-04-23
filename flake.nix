@@ -19,11 +19,6 @@
 	  	      url = "github:hyprwm/hyprlang";
 	  	      inputs.nixpkgs.follows = "nixpkgs";
   	    };
-
-  	    nix-matlab = {
-  	        inputs.nixpkgs.follows = "nixpkgs";
-  	        url = "gitlab:doronbehar/nix-matlab";
-  	      };
 	};
 
 	# defines outputs, our actual system
@@ -34,7 +29,7 @@
 		lib = nixpkgs.lib;
 		pkgs= nixpkgs.legacyPackages.${system};
 		flake-overlays = [
-			nix-matlab.overlay	
+
 		];
 	in {
 		nixosConfigurations = {
