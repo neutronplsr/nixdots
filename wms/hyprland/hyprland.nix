@@ -14,7 +14,7 @@
 		../../programs/hyprpaper/hyprpaper.nix
 		../../programs/rofi/rofi.nix		
 		../../programs/waybar/waybar.nix
-		./hyprlock.nix
+		../../programs/swayidle/swayidle.nix
 	];
 
 	home.sessionVariables = rec {
